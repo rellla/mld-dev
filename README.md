@@ -1,4 +1,3 @@
-
 1.) Installation
 
 sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
@@ -7,3 +6,13 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 2.) Build tool
 
 sudo pip3 install kas
+
+
+3.)
+
+kas build <*.yml>
+
+as example
+
+kas build mld6-x86.yml
+

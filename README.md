@@ -8,9 +8,11 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 sudo pip3 install kas
 
 3.) Clone
+
 clone this git repository
 
 4.) Build
+
 cd mld-dev
 kas build <*.yml>
 

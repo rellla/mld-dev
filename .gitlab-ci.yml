@@ -1,0 +1,3 @@
+stage: build
+  script:
+    - kas build mld6-rpi2.yml

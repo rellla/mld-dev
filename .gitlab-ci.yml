@@ -1,6 +1,0 @@
-image: kasproject/kas:latest
-
-build1:
-stage: build
-  script:
-    - kas build mld6-rpi2.yml

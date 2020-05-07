@@ -42,8 +42,11 @@ bblayers_conf_header:
     POKY_BBLAYERS_CONF_VERSION = "2"
     BBPATH = "${TOPDIR}"
     BBFILES ?= ""
-    PRSERV_HOST = "localhost:0"
+    PRSERV_HOST = "127.0.0.1:8888"
 local_conf_header:
+  prserv: |
+    INHERIT += "buildhistory"
+    BUILDHISTORY_COMMIT = "1"
   reduce_diskspace: |
     INHERIT += "rm_work_and_downloads"
   standard: |

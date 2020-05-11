@@ -9,8 +9,8 @@ target:
 repos:
 
   meta-mld:
-    url: https://github.com/rofehr/meta-mld.git
-    refspec: dunfell 
+    url: https://gitlab.com/mld1/meta-mld.git
+    refspec: master
 
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi

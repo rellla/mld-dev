@@ -10,7 +10,7 @@ repos:
 
   meta-mld:
     url: https://gitlab.com/mld1/meta-mld.git
-    refspec: master
+    refspec: dunfell
 
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi

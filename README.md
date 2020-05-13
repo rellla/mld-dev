@@ -4,7 +4,7 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
      build-essential chrpath socat libsdl1.2-dev xterm python3-pip
 ```
 	 
-2.) Installation of build tool
+2.) Installation of KAS build tool
 ```
 sudo pip3 install kas
 ```
@@ -17,7 +17,7 @@ git clone https://gitlab.com/mld1/mld-dev.git
 4.) Build project
 ```
 cd mld-dev
-kas build <*.yml>
+
 ```
 as example
 ```

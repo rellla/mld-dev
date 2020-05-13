@@ -17,7 +17,7 @@ git clone https://gitlab.com/mld1/mld-dev.git
 4.) Build project
 ```
 cd mld-dev
-kas build <*.yml>
+
 ```
 as example
 ```

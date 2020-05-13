@@ -54,6 +54,10 @@ local_conf_header:
     PATCHRESOLVE = "noop"
     IMAGE_FSTYPES = "iso"
     LICENSE_FLAGS_WHITELIST = "commercial"
+    DISTRO_FEATURES_append = " systemd"
+    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+    VIRTUAL-RUNTIME_init_manager = "systemd"
+    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"  
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
   diskmon: |

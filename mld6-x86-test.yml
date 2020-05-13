@@ -4,7 +4,7 @@ header:
 machine: genericx86-64
 distro: mld
 target:
-  - mld-image-netinstall
+  - mld-image-test
 
 repos:
   meta-mld:
@@ -53,10 +53,7 @@ local_conf_header:
     USER_CLASSES = "buildstats image-mklibs image-prelink"
     PATCHRESOLVE = "noop"
     IMAGE_FSTYPES = "iso"
-    DISTRO_FEATURES_append = " systemd"
-    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
-    VIRTUAL-RUNTIME_init_manager = "systemd"
-    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"  
+    LICENSE_FLAGS_WHITELIST = "commercial"
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
   diskmon: |

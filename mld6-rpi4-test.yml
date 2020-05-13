@@ -60,6 +60,11 @@ local_conf_header:
     PREFERRED_VERSION_linux-raspberrypi ?= "5.4.%"
     VC4DTBO ?= "vc4-kms-v3d-pi4"
     LICENSE_FLAGS_WHITELIST = "commercial"
+    GPU_MEM ?= "512"
+    DISTRO_FEATURES_append = " systemd"
+    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+    VIRTUAL-RUNTIME_init_manager = "systemd"
+    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"  
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
   diskmon: |

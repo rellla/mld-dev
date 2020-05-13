@@ -9,12 +9,12 @@ target:
 repos:
 
   meta-mld:
-    url: https://gitlab.com/mld1/meta-mld.git
-    refspec: dunfell
+    url: https://github.com/rofehr/meta-mld.git
+    refspec: dunfell 
 
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
-    refspec: master
+    refspec: dunfell
 
   poky:
     url: https://git.yoctoproject.org/git/poky
@@ -42,7 +42,7 @@ bblayers_conf_header:
     POKY_BBLAYERS_CONF_VERSION = "2"
     BBPATH = "${TOPDIR}"
     BBFILES ?= ""
-    PRSERV_HOST = "127.0.0.1:8888"
+    #PRSERV_HOST = "127.0.0.1:8888"
 local_conf_header:
   prserv: |
     INHERIT += "buildhistory"

@@ -11,7 +11,7 @@ sudo pip3 install kas
 
 3.) Clone project
 ```
-git clone https://gitlab.com/mld1/mld-dev.git
+git clone https://gitlab.com/MLD-6/mld-dev.git
 ```
 
 4.) Build project

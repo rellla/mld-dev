@@ -9,6 +9,7 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 ```
 sudo pip3 install kas
 ```
+(https://kas.readthedocs.io/en/latest/)
 
 3.) Clone project
 ```

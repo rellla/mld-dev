@@ -53,7 +53,7 @@ local_conf_header:
     SDKMACHINE = "x86_64"
     USER_CLASSES = "buildstats image-mklibs image-prelink"
     PATCHRESOLVE = "noop"
-    PREFERRED_VERSION_linux-raspberrypi ?= "5.4.%"
+    PREFERRED_VERSION_linux-mainline ?= "5.3.%"
     LICENSE_FLAGS_WHITELIST = "commercial"
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"

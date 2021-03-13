@@ -1,24 +1,25 @@
 header:
   version: 8
 
-machine: raspberrypi3
+machine: raspberrypi2
 distro: mld
 
 target:
   - mld-image-test
 
 repos:
+
   meta-mld:
-    url: https://gitlab.com/mld1/meta-mld.git
-    refspec: dunfell 
+    url: https://github.com/rofehr/meta-mld.git
+    refspec: zeus 
 
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
-    refspec: dunfell
+    refspec: zeus
 
   poky:
     url: https://git.yoctoproject.org/git/poky
-    refspec: dunfell
+    refspec: zeus
     layers:
       meta:
       meta-poky:
@@ -26,20 +27,13 @@ repos:
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: dunfell
+    refspec: zeus
     layers:
       meta-oe:
-      meta-gnome:
-      meta-multimedia:
       meta-python:
       meta-networking:
       meta-perl:
-      meta-xfce:
 
-
-  meta-qt5:
-    url: https://github.com/meta-qt5/meta-qt5/
-    refspec: dunfell
 
 bblayers_conf_header:
   standard: |

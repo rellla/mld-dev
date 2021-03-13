@@ -10,15 +10,15 @@ repos:
 
   meta-mld:
     url: https://github.com/rofehr/meta-mld.git
-    refspec: dunfell 
+    refspec: zeus 
 
   meta-sunxi:
     url: https://gitlab.com/rofehr/meta-sunxi.git
-    refspec: dunfell
+    refspec: zeus
 
   poky:
     url: https://git.yoctoproject.org/git/poky
-    refspec: dunfell
+    refspec: zeus
     layers:
       meta:
       meta-poky:
@@ -26,7 +26,7 @@ repos:
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: dunfell
+    refspec: zeus
     layers:
       meta-oe:
       meta-python:
@@ -35,7 +35,7 @@ repos:
 
   meta-qt5:
     url: https://github.com/meta-qt5/meta-qt5/
-    refspec: dunfell
+    refspec: zeus
 
 bblayers_conf_header:
   standard: |
@@ -58,6 +58,7 @@ local_conf_header:
     USER_CLASSES = "buildstats image-mklibs image-prelink"
     PATCHRESOLVE = "noop"
     PREFERRED_VERSION_linux-raspberrypi ?= "5.4.%"
+    LICENSE_FLAGS_WHITELIST="commercial"
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
   diskmon: |

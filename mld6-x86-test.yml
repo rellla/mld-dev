@@ -1,6 +1,7 @@
 header:
   version: 8
 
+
 machine: genericx86-64
 distro: mld
 target:
@@ -9,11 +10,11 @@ target:
 repos:
   meta-mld:
     url: https://github.com/rofehr/meta-mld.git
-    refspec: dunfell 
+    refspec: zeus 
 
   poky:
     url: https://git.yoctoproject.org/git/poky
-    refspec: dunfell
+    refspec: zeus
     layers:
       meta:
       meta-poky:
@@ -21,7 +22,7 @@ repos:
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: dunfell
+    refspec: zeus
     layers:
       meta-oe:
       meta-python:
@@ -30,7 +31,7 @@ repos:
 
   meta-qt5:
     url: https://github.com/meta-qt5/meta-qt5/
-    refspec: dunfell
+    refspec: zeus
 
 bblayers_conf_header:
   standard: |
@@ -52,9 +53,14 @@ local_conf_header:
     SDKMACHINE = "x86_64"
     USER_CLASSES = "buildstats image-mklibs image-prelink"
     PATCHRESOLVE = "noop"
-    IMAGE_FSTYPES = "iso"
+    PREFERRED_VERSION_linux-yocto ?= "5.10.%"
+    IMAGE_FSTYPES = "hddimg"
+    IMAGE_FSTYPES += "iso"
+    IMAGE_FSTYPES += "wic.vmdk"
+    IMAGE_FSTYPES += "wic.vdi"
     LICENSE_FLAGS_WHITELIST = "commercial"
     DISTRO_FEATURES_append = " systemd"
+    DISTRO_FEATURES_append = " x11"
     DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
     VIRTUAL-RUNTIME_init_manager = "systemd"
     VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"  

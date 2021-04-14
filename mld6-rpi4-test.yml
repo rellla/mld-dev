@@ -9,7 +9,7 @@ target:
 repos:
 
   meta-mld:
-    url: https://github.com/rofehr/meta-mld.git
+    url: https://gitlab.com/rofehr/meta-mld.git
     refspec: zeus 
 
   meta-raspberry:

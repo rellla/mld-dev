@@ -10,15 +10,15 @@ repos:
 
   meta-mld:
     url: https://github.com/rofehr/meta-mld.git
-    refspec: dunfell 
+    refspec: gatesgarth 
 
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
-    refspec: dunfell
+    refspec: hardknott
 
   poky:
     url: https://git.yoctoproject.org/git/poky
-    refspec: dunfell
+    refspec: hardknott
     layers:
       meta:
       meta-poky:
@@ -26,7 +26,7 @@ repos:
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: dunfell
+    refspec: hardknott
     layers:
       meta-oe:
       meta-python:
@@ -35,7 +35,7 @@ repos:
 
   meta-qt5:
     url: https://github.com/meta-qt5/meta-qt5/
-    refspec: dunfell
+    refspec: hardknott
 
 bblayers_conf_header:
   standard: |
@@ -57,11 +57,13 @@ local_conf_header:
     SDKMACHINE = "x86_64"
     USER_CLASSES = "buildstats image-mklibs image-prelink"
     PATCHRESOLVE = "noop"
-    PREFERRED_VERSION_linux-raspberrypi ?= "5.4.%"
+    #PREFERRED_VERSION_linux-raspberrypi ?= "5.4.%"
+    PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
     DISTRO_FEATURES_append = " systemd"
     DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
     VIRTUAL-RUNTIME_init_manager = "systemd"
-    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"     
+    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"   
+    LICENSE_FLAGS_WHITELIST = "commercial"  
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
   diskmon: |

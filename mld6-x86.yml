@@ -1,19 +1,20 @@
 header:
   version: 8
 
+
 machine: genericx86-64
 distro: mld
 target:
-  - mld-image-netinstall
+  - mld-image-boot
 
 repos:
   meta-mld:
     url: https://github.com/rofehr/meta-mld.git
-    refspec: dunfell 
+    refspec: gatesgarth 
 
   poky:
     url: https://git.yoctoproject.org/git/poky
-    refspec: dunfell
+    refspec: hardknott
     layers:
       meta:
       meta-poky:
@@ -21,16 +22,13 @@ repos:
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: dunfell
+    refspec: hardknott
     layers:
       meta-oe:
       meta-python:
       meta-networking:
       meta-perl:
-
-  meta-qt5:
-    url: https://github.com/meta-qt5/meta-qt5/
-    refspec: dunfell
+      meta-multimedia:
 
 bblayers_conf_header:
   standard: |
@@ -38,6 +36,7 @@ bblayers_conf_header:
     BBPATH = "${TOPDIR}"
     BBFILES ?= ""
     #PRSERV_HOST = "127.0.0.1:8888"
+    #PRSERV_HOST = "127.0.0.1:5678"
 local_conf_header:
   prserv: |
     INHERIT += "buildhistory"
@@ -48,20 +47,23 @@ local_conf_header:
     CONF_VERSION = "1"
     PACKAGE_CLASSES ?= "package_deb"
     EXTRA_IMAGE_FEATURES += " package-management "
-    #PACKAGE_FEED_URIS = "http://<local-machine-ip>:5678"
+    PACKAGE_FEED_URIS = "http://81.169.232.251:5678"
     SDKMACHINE = "x86_64"
-    USER_CLASSES = "buildstats image-mklibs image-prelink"
+    #USER_CLASSES = "buildstats image-mklibs image-prelink"
     PATCHRESOLVE = "noop"
+    #PREFERRED_VERSION_linux-yocto ?= "5.12.%"
+    PREFERRED_VERSION_linux-mainline ?= "5.12%"
     IMAGE_FSTYPES = "hddimg"
     IMAGE_FSTYPES += "iso"
     IMAGE_FSTYPES += "wic.vmdk"
     IMAGE_FSTYPES += "wic.vdi"
     LICENSE_FLAGS_WHITELIST = "commercial"
-    DISTRO_FEATURES_append = " systemd"
-    DISTRO_FEATURES_append = " x11"
+    DISTRO_FEATURES:append = " systemd"
+    DISTRO_FEATURES:append = " x11"
     DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
     VIRTUAL-RUNTIME_init_manager = "systemd"
     VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"  
+    DISTRO_FEATURES:append = " opengl"
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
   diskmon: |

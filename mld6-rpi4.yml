@@ -9,7 +9,7 @@ target:
 repos:
 
   meta-mld:
-    url: https://github.com/rofehr/meta-mld.git
+    url: https://gitlab.com/MLD-6/meta-mld.git
     refspec: gatesgarth 
 
   meta-raspberry:

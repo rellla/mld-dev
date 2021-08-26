@@ -43,6 +43,7 @@ repos:
       meta-networking:
       meta-perl:
       meta-multimedia:
+      meta-initramfs:
       
 
 bblayers_conf_header:

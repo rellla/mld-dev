@@ -56,9 +56,9 @@ local_conf_header:
     SDKMACHINE = "x86_64"
     #USER_CLASSES = "buildstats image-mklibs image-prelink"
     PATCHRESOLVE = "noop"
-    PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"
+    #PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"
     #PREFERRED_VERSION_linux-mainline ?= "5.10%"
-    #PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
+    PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
     VC4DTBO ?= "vc4-kms-v3d-pi4"
     #VC4DTBO ?= "vc4-fkms-v3d"
     LICENSE_FLAGS_WHITELIST = "commercial"
@@ -80,7 +80,7 @@ local_conf_header:
     #INITRAMFS_IMAGE_BUNDLE = "1"
 
   extra: |
-    #RPI_USE_U_BOOT = "1"  
+    RPI_USE_U_BOOT = "1"  
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
   diskmon: |

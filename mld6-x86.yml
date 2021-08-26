@@ -29,6 +29,8 @@ repos:
       meta-networking:
       meta-perl:
       meta-multimedia:
+      meta-initramfs:
+      
 
 bblayers_conf_header:
   standard: |
@@ -53,7 +55,7 @@ local_conf_header:
     PATCHRESOLVE = "noop"
     #PREFERRED_VERSION_linux-yocto ?= "5.12.%"
     PREFERRED_VERSION_linux-mainline ?= "5.12%"
-    IMAGE_FSTYPES = "hddimg"
+    #IMAGE_FSTYPES = "hddimg"
     IMAGE_FSTYPES += "iso"
     IMAGE_FSTYPES += "wic.vmdk"
     IMAGE_FSTYPES += "wic.vdi"
@@ -64,6 +66,7 @@ local_conf_header:
     VIRTUAL-RUNTIME_init_manager = "systemd"
     VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"  
     DISTRO_FEATURES:append = " opengl"
+    PREFERRED_PROVIDER_virtual/psplash = "plymouth"
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
   diskmon: |

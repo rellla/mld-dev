@@ -1,5 +1,7 @@
 header:
   version: 8
+  includes: 
+    - base.yml
 
 machine: cubietruck
 distro: mld
@@ -47,8 +49,6 @@ local_conf_header:
   prserv: |
     INHERIT += "buildhistory"
     BUILDHISTORY_COMMIT = "1"
-  reduce_diskspace: |
-    INHERIT += "rm_work_and_downloads"
   standard: |
     CONF_VERSION = "1"
     PACKAGE_CLASSES = "package_deb"

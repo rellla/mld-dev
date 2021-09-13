@@ -30,3 +30,4 @@ kas build mld6-x86.yml
 ```
 kas shell mld6-x86.yml
 ```
+then all normal bitbake functions can be used. 

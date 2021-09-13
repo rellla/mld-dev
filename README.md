@@ -25,3 +25,8 @@ as example
 ```
 kas build mld6-x86.yml
 ```
+
+5.) Initialize bitbake develop environment
+```
+kas shell mld6-x86.yml
+```

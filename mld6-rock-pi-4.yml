@@ -8,8 +8,10 @@ machine: rock-pi-4b
 
 distro: mld
 target:
-  - mld-image-boot
   - core-image-minimal 
+  - mld-image-rpi-drm
+  - mld-image-boot
+  - mld-image-netinstall
   
 repos:
 

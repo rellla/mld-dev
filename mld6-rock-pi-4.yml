@@ -2,7 +2,6 @@ header:
   version: 8
   includes: 
     - base.yml
-    - systemd.yml
  
 machine: rock-pi-4b
 
@@ -75,6 +74,8 @@ local_conf_header:
     PREFERRED_VERSION_linux-yocto = "5.10%"
     LICENSE_FLAGS_WHITELIST = "commercial"
     DISTRO_FEATURES:append = " x11 opengl"
+    VIRTUAL-RUNTIME_init_manager = "systemd"
+    DISTRO_FEATURES:append = " systemd"
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
   diskmon: |

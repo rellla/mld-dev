@@ -3,7 +3,6 @@ header:
 
 local_conf_header:
   shared_download: |
-    #INHERIT += "rm_work_and_downloads"
     DL_DIR ?= "/home/share/downloads"
     SSTATE_DIR ?= "/home/share/sstate-cache"
 

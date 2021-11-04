@@ -1,6 +1,9 @@
 header:
   version: 8
-  
+  includes: 
+    - base.yml
+    - systemd.yml
+    
 machine: raspberrypi4
 distro: mld
 target:
@@ -46,8 +49,6 @@ local_conf_header:
   prserv: |
     INHERIT += "buildhistory"
     BUILDHISTORY_COMMIT = "1"
-  reduce_diskspace: |
-    INHERIT += "rm_work_and_downloads"
   standard: |
     CONF_VERSION = "1"
     PACKAGE_CLASSES = "package_deb"
@@ -63,12 +64,8 @@ local_conf_header:
     #VC4DTBO ?= "vc4-fkms-v3d"
     LICENSE_FLAGS_WHITELIST = "commercial"
     GPU_MEM ?= "512"
-    DISTRO_FEATURES:append = " systemd x11 opengl"
-    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
-    VIRTUAL-RUNTIME_init_manager = "systemd"
-    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"  
+    DISTRO_FEATURES:append = "x11 opengl"
     PREFERRED_VERSION_imagemagick = "6.%"
-    
     MACHINE_FEATURES += "vc4graphics"
 
     #BOOT_SPACE = "1073741"

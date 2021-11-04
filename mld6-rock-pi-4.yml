@@ -1,11 +1,16 @@
 header:
   version: 8
-  
+  includes: 
+    - base.yml
+ 
 machine: rock-pi-4b
-#machine: rockchip-rk3399pro-evb
+
 distro: mld
 target:
-  - mld-image-test
+  - core-image-minimal 
+  - mld-image-rpi-drm
+  - mld-image-boot
+  - mld-image-netinstall
   
 repos:
 
@@ -19,6 +24,7 @@ repos:
     layers:
       meta-arm:
       meta-arm-toolchain:
+      meta-arm-bsp:
       
   meta-rockchip:
      url: git://git.yoctoproject.org/meta-rockchip
@@ -57,8 +63,6 @@ local_conf_header:
   prserv: |
     INHERIT += "buildhistory"
     BUILDHISTORY_COMMIT = "1"
-  reduce_diskspace: |
-    INHERIT += "rm_work_and_downloads"
   standard: |
     CONF_VERSION = "1"
     PACKAGE_CLASSES = "package_deb"
@@ -67,12 +71,11 @@ local_conf_header:
     SDKMACHINE = "x86_64"
     USER_CLASSES = "buildstats image-mklibs image-prelink"
     PATCHRESOLVE = "noop"
-    PREFERRED_VERSION_linux-mainline ?= "5.10%"
+    PREFERRED_VERSION_linux-yocto = "5.10%"
     LICENSE_FLAGS_WHITELIST = "commercial"
-    DISTRO_FEATURES:append = " systemd x11 opengl"
-    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+    DISTRO_FEATURES:append = " x11 opengl"
     VIRTUAL-RUNTIME_init_manager = "systemd"
-    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"  
+    DISTRO_FEATURES:append = " systemd"
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
   diskmon: |

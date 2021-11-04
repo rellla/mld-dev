@@ -1,19 +1,11 @@
 header:
   version: 8
 
-machine: raspberrypi4
-
-
-bblayers_conf_header:
-  standard: |
-    POKY_BBLAYERS_CONF_VERSION = "2"
-    BBPATH = "${TOPDIR}"
-    BBFILES ?= ""
-    #PRSERV_HOST = "127.0.0.1:8888"
 local_conf_header:
   standard: |
-    DISTRO_FEATURES_append = " systemd"
-    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
     VIRTUAL-RUNTIME_init_manager = "systemd"
-    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"  
+    DISTRO_FEATURES:append = " systemd"
+    DISTRO_FEATURES:append = " x11"
+    DISTRO_FEATURES:append = " opengl"
+
         

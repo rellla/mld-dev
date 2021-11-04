@@ -1,0 +1,9 @@
+header:
+  version: 8
+
+local_conf_header:
+  shared_download: |
+    DL_DIR ?= "/home/share/downloads"
+    SSTATE_DIR ?= "/home/share/sstate-cache"
+
+

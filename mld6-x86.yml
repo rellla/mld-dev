@@ -1,76 +1,18 @@
 header:
-  version: 8
+  version: 9
   includes: 
     - base.yml
 
 machine: genericx86-64
-distro: mld
-target:
-  - mld-image-boot
 
-repos:
-  meta-mld:
-    url: https://gitlab.com/MLD-6/meta-mld.git
-    refspec: gatesgarth 
-
-  poky:
-    url: https://git.yoctoproject.org/git/poky
-    refspec: hardknott
-    layers:
-      meta:
-      meta-poky:
-      meta-yocto-bsp:
-
-  meta-openembedded:
-    url: http://git.openembedded.org/meta-openembedded
-    refspec: hardknott
-    layers:
-      meta-oe:
-      meta-python:
-      meta-networking:
-      meta-perl:
-      meta-multimedia:
-      meta-initramfs:
-      
-
-bblayers_conf_header:
-  standard: |
-    POKY_BBLAYERS_CONF_VERSION = "2"
-    BBPATH = "${TOPDIR}"
-    BBFILES ?= ""
 local_conf_header:
-  prserv: |
-    INHERIT += "buildhistory"
-    BUILDHISTORY_COMMIT = "1"
-  standard: |
-    CONF_VERSION = "1"
-    PACKAGE_CLASSES ?= "package_deb"
-    EXTRA_IMAGE_FEATURES += " package-management ssh-server-openssh splash"
-    PACKAGE_FEED_URIS = "http://81.169.232.251:5678"
-    SDKMACHINE = "x86_64"
-    PATCHRESOLVE = "noop"
+  plattform: |
     IMAGE_FSTYPES += "iso"
-    LICENSE_FLAGS_WHITELIST = "commercial"
-    DISTRO_FEATURES += "systemd"
-    DISTRO_FEATURES += "plymouth"
-    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
-    VIRTUAL-RUNTIME_init_manager = "systemd"
-    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
-    
-    #SYSLINUX_SPLASH = "${TOPDIR}/mld-dev/meta-mld/recipes-core/plymouth/logo.png"
-    SPLASH = "plymouth"
-    PREFERRED_PROVIDER_virtual/psplash = "plymouth"
-    APPEND += "vga=0x314 splash"
-    #APPEND += "quiet"
-  debug-tweaks: |
-    EXTRA_IMAGE_FEATURES = "debug-tweaks"
-  diskmon: |
-    BB_DISKMON_DIRS = "\
-        STOPTASKS,${TMPDIR},1G,100K \
-        STOPTASKS,${DL_DIR},1G,100K \
-        STOPTASKS,${SSTATE_DIR},1G,100K \
-        STOPTASKS,/tmp,100M,100K \
-        ABORT,${TMPDIR},100M,1K \
-        ABORT,${DL_DIR},100M,1K \
-        ABORT,${SSTATE_DIR},100M,1K \
-        ABORT,/tmp,10M,1K" 
+
+  bootloader: |
+    SYSLINUX_SERIAL = ""
+    SYSLINUX_SPLASH = "${TOPDIR}/../meta-mld/files/splash.png"
+    SYSLINUX_OPTS = "menu RESOLUTION 800 600;menu WIDTH 28;menu MARGIN 1;menu ROWS 6;menu HSHIFT 35;menu VSHIFT 19;menu TABMSGROW -1;menu CMDLINEROW -1;menu TIMEOUTROW 20;menu CLEAR;menu HIDDEN;menu color screen * #00ffffff #00ffffff none;menu color border * #00ffffff #00ffffff none;menu color title * #00ffffff #00ffffff none;menu color unsel * #88ffffff #00ffffff none;menu color sel * #ffffffff #ffc00000 none;menu color disabled * #09ffffff #00ffffff none;menu color tabmsg * #09ffffff #00ffffff none;menu color cmdline * #88ffffff #00ffffff none;menu color timeout * #09ffffff #00ffffff none;menu color timeout_msg * #09ffffff #00ffffff none"
+    GRUB_SERIAL = ""
+    GRUB_TIMEOUT = "5"
+    #GRUB_OPTS = "menu_color_highlight=white/red;color_normal=black/black"

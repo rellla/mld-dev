@@ -1,9 +1,87 @@
 header:
-  version: 8
+  version: 9
+
+distro: mld
+
+repos:
+  meta-mld:
+    url: https://gitlab.com/MLD-6/meta-mld.git
+    refspec: gatesgarth 
+
+  poky:
+    url: https://git.yoctoproject.org/git/poky
+    refspec: hardknott
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+
+  meta-openembedded:
+    url: http://git.openembedded.org/meta-openembedded
+    refspec: hardknott
+    layers:
+      meta-oe:
+      meta-python:
+      meta-networking:
+      meta-initramfs:
+#      meta-multimedia:
+
+bblayers_conf_header:
+  standard: |
+    POKY_BBLAYERS_CONF_VERSION = "2"
+    BBPATH = "${TOPDIR}"
+    BBFILES ?= ""
 
 local_conf_header:
-  shared_download: |
+#  prserv: |
+#    INHERIT += "buildhistory"
+#    BUILDHISTORY_COMMIT = "1"
+
+  shared_cache: |
     DL_DIR ?= "/home/share/downloads"
     SSTATE_DIR ?= "/home/share/sstate-cache"
 
+  diskmon: |
+    BB_DISKMON_DIRS = "\
+        STOPTASKS,${TMPDIR},1G,100K \
+        STOPTASKS,${DL_DIR},1G,100K \
+        STOPTASKS,${SSTATE_DIR},1G,100K \
+        STOPTASKS,/tmp,100M,100K \
+        ABORT,${TMPDIR},100M,1K \
+        ABORT,${DL_DIR},100M,1K \
+        ABORT,${SSTATE_DIR},100M,1K \
+        ABORT,/tmp,10M,1K"
 
+  systemd: |
+    VIRTUAL-RUNTIME_init_manager = "systemd"
+    DISTRO_FEATURES += "systemd"
+    #VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+    #DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+
+  plymouth: |
+    DISTRO_FEATURES += "plymouth"
+    SPLASH = "plymouth"
+    APPEND += "vga=0x314 splash quiet"
+    EXTRA_IMAGE_FEATURES += "splash"
+
+  package-management: |
+    PACKAGE_CLASSES = "package_deb"
+    EXTRA_IMAGE_FEATURES += "package-management"
+    PACKAGE_FEED_URIS = "http://mld6.minidvblinux.de"
+
+  login: |
+    #EXTRA_IMAGE_FEATURES += "empty-root-password allow-empty-password"
+    EXTRA_IMAGE_FEATURES += "debug-tweaks"
+
+  other: |
+    CONF_VERSION = "1"
+    LICENSE_FLAGS_WHITELIST = "commercial"
+    SDKMACHINE = "x86_64"
+
+  features: |
+    EXTRA_IMAGE_FEATURES += "ssh-server-openssh"
+    #DISTRO_FEATURES += "x11"
+    #DISTRO_FEATURES += "opengl"
+    #DISTRO_FEATURES += "directfb"
+    #DISTRO_FEATURES += "kms"
+    #CORE_IMAGE_EXTRA_INSTALL += "" # Packages to add to image

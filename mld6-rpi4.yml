@@ -4,6 +4,7 @@ header:
     - base.yml
     
 machine: raspberrypi4
+
 target:
   - mld-image-boot
 
@@ -33,4 +34,5 @@ local_conf_header:
     #INITRAMFS_IMAGE = "image-minimal-initramfs"
     #INITRAMFS_IMAGE_BUNDLE = "1"
 
+  bootloader: |
     #RPI_USE_U_BOOT = "1"  

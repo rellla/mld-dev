@@ -3,6 +3,9 @@ header:
 
 distro: mld
 
+env: 
+  USER: none
+
 repos:
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
@@ -55,8 +58,9 @@ local_conf_header:
   systemd: |
     VIRTUAL-RUNTIME_init_manager = "systemd"
     DISTRO_FEATURES += "systemd"
-    #VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
-    #DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+    #VIRTUAL-RUNTIME_initscripts = "" # remove sysvinit completely
+    #VIRTUAL-RUNTIME_initscripts = "systemd-compat-units" # enable sysvinit fallback
 
   plymouth: |
     DISTRO_FEATURES += "plymouth"
@@ -67,7 +71,7 @@ local_conf_header:
   package-management: |
     PACKAGE_CLASSES = "package_deb"
     EXTRA_IMAGE_FEATURES += "package-management"
-    PACKAGE_FEED_URIS = "http://mld6.minidvblinux.de"
+    PACKAGE_FEED_URIS = "http://mld6.minidvblinux.de/${USER}"
 
   login: |
     #EXTRA_IMAGE_FEATURES += "empty-root-password allow-empty-password"
@@ -79,9 +83,9 @@ local_conf_header:
     SDKMACHINE = "x86_64"
 
   features: |
-    EXTRA_IMAGE_FEATURES += "ssh-server-openssh"
+    IMAGE_FEATURES += "ssh-server-openssh"
+    CORE_IMAGE_EXTRA_INSTALL += "ca-certificates"
     #DISTRO_FEATURES += "x11"
     #DISTRO_FEATURES += "opengl"
     #DISTRO_FEATURES += "directfb"
     #DISTRO_FEATURES += "kms"
-    #CORE_IMAGE_EXTRA_INSTALL += "" # Packages to add to image

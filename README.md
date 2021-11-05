@@ -31,3 +31,8 @@ kas build mld6-x86.yml
 kas shell mld6-x86.yml
 ```
 then all normal bitbake functions can be used. 
+
+6.) Update package index (e.g. for apt) 
+```
+kas shell mld6-x86.yml -c "bitbake package-index"
+```

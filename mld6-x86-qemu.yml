@@ -1,0 +1,24 @@
+header:
+  version: 9
+  includes: 
+    - base.yml
+
+machine: qemux86-64
+
+target:
+  - mld-image-base
+
+local_conf_header:
+  plattform: |
+    IMAGE_FSTYPES += "iso"
+
+  bootloader: |
+    SYSLINUX_SERIAL = ""
+    SYSLINUX_SPLASH = "${TOPDIR}/../meta-mld/files/splash.png"
+    SYSLINUX_OPTS = "menu RESOLUTION 800 600;menu WIDTH 28;menu MARGIN 1;menu ROWS 6;menu HSHIFT 35;menu VSHIFT 19;menu TABMSGROW -1;menu CMDLINEROW -1;menu TIMEOUTROW 20;menu CLEAR;menu HIDDEN;menu color screen * #00ffffff #00ffffff none;menu color border * #00ffffff #00ffffff none;menu color title * #00ffffff #00ffffff none;menu color unsel * #88ffffff #00ffffff none;menu color sel * #ffffffff #ffc00000 none;menu color disabled * #09ffffff #00ffffff none;menu color tabmsg * #09ffffff #00ffffff none;menu color cmdline * #88ffffff #00ffffff none;menu color timeout * #09ffffff #00ffffff none;menu color timeout_msg * #09ffffff #00ffffff none"
+    GRUB_SERIAL = ""
+    GRUB_TIMEOUT = "5"
+    #GRUB_OPTS = "menu_color_highlight=white/red;color_normal=black/black"
+
+  packages: |
+    #CORE_IMAGE_EXTRA_INSTALL += ""

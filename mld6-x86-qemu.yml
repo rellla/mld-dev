@@ -11,6 +11,9 @@ target:
 local_conf_header:
   plattform: |
     IMAGE_FSTYPES += "iso"
+    INITRAMFS_FSTYPES = "cpio.lzma"
+    LIVE_ROOTFS_TYPE = "squashfs"
+    APPEND += "ro"
 
   bootloader: |
     SYSLINUX_SERIAL = ""

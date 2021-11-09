@@ -85,7 +85,9 @@ local_conf_header:
   features: |
     IMAGE_FEATURES += "ssh-server-openssh"
     CORE_IMAGE_EXTRA_INSTALL += "ca-certificates"
+    DISTRO_FEATURES += "pam"
     DISTRO_FEATURES += "x11"
-    #DISTRO_FEATURES += "opengl"
+    DISTRO_FEATURES += "opengl"
+    #DISTRO_FEATURES += "vulkan"
     #DISTRO_FEATURES += "directfb"
     #DISTRO_FEATURES += "kms"

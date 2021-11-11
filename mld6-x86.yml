@@ -1,12 +1,9 @@
 header:
   version: 9
   includes: 
-    - base.yml
+    - install.yml
 
 machine: genericx86-64
-
-target:
-  - mld-image-base
 
 local_conf_header:
   plattform: |

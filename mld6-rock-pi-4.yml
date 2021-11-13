@@ -29,5 +29,6 @@ repos:
 local_conf_header:
   plattform: |
     USER_CLASSES = "buildstats image-mklibs image-prelink"
-    PREFERRED_VERSION_linux-yocto = "5.10%"
+    #PREFERRED_VERSION_linux-yocto = "5.15%"
+    PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-dev"
     DISTRO_FEATURES += "x11 opengl"

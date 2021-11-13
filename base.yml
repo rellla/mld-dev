@@ -84,6 +84,7 @@ local_conf_header:
     CONF_VERSION = "1"
     LICENSE_FLAGS_WHITELIST = "commercial"
     SDKMACHINE = "x86_64"
+    hostname_pn-base-files="MLD"
 
   features: |
     IMAGE_FEATURES += "ssh-server-openssh"

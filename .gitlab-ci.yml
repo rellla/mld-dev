@@ -21,6 +21,7 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-   git clone https://gitlab.com/MLD-6/mld-dev.git
-   kas build mld6-x86-qemu.yml
+   - git clone https://gitlab.com/MLD-6/mld-dev.git
+   - cd mld-dev
+   - kas build mld6-x86-qemu.yml
 

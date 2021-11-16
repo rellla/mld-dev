@@ -1,6 +1,8 @@
 #!/bin/sh
 # build the whole project
 
+cd ${0%/*}
+
 git pull
 (cd meta-mld; git pull)
 

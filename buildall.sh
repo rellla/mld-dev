@@ -17,4 +17,4 @@ cd ${0%/*}
   done
   
   date
-} &> buildall.log
+} > buildall.log 2>&1

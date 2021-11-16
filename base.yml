@@ -84,6 +84,7 @@ local_conf_header:
     CONF_VERSION = "1"
     LICENSE_FLAGS_WHITELIST = "commercial"
     SDKMACHINE = "x86_64"
+    VDR_VERSION = "2.5.6"
     hostname_pn-base-files="MLD"
     APPEND += "vga=current quiet"
     #APPEND += "loglevel=3 rd.systemd.show_status=auto rd.udev.log_level=3 vt.global_cursor_default=0"

@@ -3,18 +3,11 @@
 
 cd ${0%/*}
 
-{
-  echo '----'
-  date
+git pull
+(cd meta-mld; git pull)
 
-  git pull
-  (cd meta-mld; git pull)
-
-  for machine in x86 x86-qemu rpi4; do
-    kas build mld6-$machine.yml
-    kas shell mld6-$machine.yml -c "bitbake packagegroup-all"
-    kas shell mld6-$machine.yml -c "bitbake package-index"
-  done
-  
-  date
-} > buildall.log 2>&1
+for machine in x86 x86-qemu rpi4; do
+  /usr/local/bin/kas build mld6-$machine.yml
+  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake packagegroup-all"
+  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake package-index"
+done

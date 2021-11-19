@@ -1,0 +1,23 @@
+header:
+  version: 1
+
+repos:
+  OSSystems:
+    url: https://github.com/OSSystems/meta-browser
+    refspec: master
+    layers:
+      meta-chromium:
+
+  meta-clang:
+    url: http://github.com/kraj/meta-clang
+    refspec: hardknott
+
+#  openembedded-core:
+#    url: http://git.openembedded.org/openembedded-core
+#    refspec: hardknott
+
+local_conf_header:
+  chromium: |
+    DISTRO_FEATURES += "vulkan"
+    DISTRO_FEATURES += "opengl"
+    CORE_IMAGE_EXTRA_INSTALL += "chromium"

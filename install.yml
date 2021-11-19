@@ -5,10 +5,10 @@ header:
 
 target:
   - mld-image-netinstall
+  #- mld-image-base
 
 local_conf_header:
   install: |
     DISTRO_FEATURES += "pam"
-    DISTRO_FEATURES += "x11"
     DISTRO_FEATURES += "opengl"
     PREFERRED_VERSION_nodejs = "14.%"

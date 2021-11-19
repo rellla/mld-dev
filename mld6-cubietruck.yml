@@ -1,12 +1,9 @@
 header:
   version: 9
   includes: 
-    - base.yml
+    - install.yml
 
 machine: cubietruck
-
-target:
-  - mld-image-netinstall
 
 repos:
   meta-sunxi:

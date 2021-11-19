@@ -1,12 +1,9 @@
 header:
   version: 9
   includes: 
-    - base.yml
+    - install.yml
 
 machine: raspberrypi2
-
-target:
-  - mld-image-netinstall
 
 repos:
   meta-raspberry:

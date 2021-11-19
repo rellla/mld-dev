@@ -1,12 +1,9 @@
 header:
   version: 9
   includes: 
-    - base.yml
+    - install.yml
     
 machine: raspberrypi4
-
-target:
-  - mld-image-boot
 
 repos:
   meta-raspberry:
@@ -15,15 +12,12 @@ repos:
 
 local_conf_header:
   plattform: |
-    #USER_CLASSES = "buildstats image-mklibs image-prelink"
     #PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"
     #PREFERRED_VERSION_linux-mainline ?= "5.10%"
     PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
     VC4DTBO ?= "vc4-kms-v3d-pi4"
     #VC4DTBO ?= "vc4-fkms-v3d"
     GPU_MEM ?= "512"
-    DISTRO_FEATURES += "x11 opengl"
-    PREFERRED_VERSION_imagemagick = "6.%"
     MACHINE_FEATURES += "vc4graphics"
 
     #BOOT_SPACE = "1073741"
@@ -36,3 +30,7 @@ local_conf_header:
 
   bootloader: |
     #RPI_USE_U_BOOT = "1"  
+
+  other: |
+    PREFERRED_VERSION_imagemagick = "6.%"
+    #USER_CLASSES = "buildstats image-mklibs image-prelink"

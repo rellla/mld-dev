@@ -1,7 +1,7 @@
 header:
   version: 9
   includes: 
-    - base.yml
+    - install.yml
 
 machine: rock-pi-4b
 
@@ -31,4 +31,3 @@ local_conf_header:
     USER_CLASSES = "buildstats image-mklibs image-prelink"
     #PREFERRED_VERSION_linux-yocto = "5.15%"
     PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-dev"
-    DISTRO_FEATURES += "x11 opengl"

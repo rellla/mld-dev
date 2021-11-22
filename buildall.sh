@@ -1,6 +1,8 @@
 #!/bin/sh
 # build the whole project
 
+umask 0002
+
 cd ${0%/*}
 
 git pull

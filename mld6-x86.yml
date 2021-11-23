@@ -11,7 +11,7 @@ local_conf_header:
     INITRAMFS_FSTYPES = "cpio.lzma"
     LIVE_ROOTFS_TYPE = "squashfs"
     APPEND += "ro"
-    PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-dev"
+#    PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-dev"
 
   bootloader: |
     SYSLINUX_SERIAL = ""

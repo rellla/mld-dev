@@ -19,3 +19,14 @@ local_conf_header:
     USER_CLASSES = "buildstats image-mklibs image-prelink"
     #PREFERRED_VERSION_linux-raspberrypi ?= "5.4.%"
     PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
+    
+  bootloader: |
+    RPI_USE_U_BOOT = "1"  
+    
+  rpi-specific: |
+    #ENABLE_I2C = "1"
+    #RPI_EXTRA_CONFIG = "dtoverlay=pi3-disable-bt"  
+    VC4DTBO ?= "vc4-fkms-v3d"
+    GPU_MEM ?= "256"
+    MACHINE_FEATURES += "vc4graphics"
+    CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"

@@ -8,17 +8,7 @@ machine: qemux86-64
 local_conf_header:
   plattform: |
     IMAGE_FSTYPES += "iso"
-    INITRAMFS_FSTYPES = "cpio.lzma"
-    LIVE_ROOTFS_TYPE = "squashfs"
-    APPEND += "ro"
 #    PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-dev"
-
-  bootloader: |
-    SYSLINUX_SERIAL = ""
-    SYSLINUX_SPLASH = "${TOPDIR}/../meta-mld/files/splash.png"
-    SYSLINUX_OPTS = "menu RESOLUTION 800 600;menu WIDTH 28;menu MARGIN 1;menu ROWS 6;menu HSHIFT 35;menu VSHIFT 19;menu TABMSGROW -1;menu CMDLINEROW -1;menu TIMEOUTROW 20;menu CLEAR;menu HIDDEN;menu color screen * #00ffffff #00ffffff none;menu color border * #00ffffff #00ffffff none;menu color title * #00ffffff #00ffffff none;menu color unsel * #88ffffff #00ffffff none;menu color sel * #ffffffff #ffc00000 none;menu color disabled * #09ffffff #00ffffff none;menu color tabmsg * #09ffffff #00ffffff none;menu color cmdline * #88ffffff #00ffffff none;menu color timeout * #09ffffff #00ffffff none;menu color timeout_msg * #09ffffff #00ffffff none"
-    SYSTEMD_BOOT_TIMEOUT = "5"
-    EFI_PROVIDER = "systemd-boot"
 
   packages: |
     #CORE_IMAGE_EXTRA_INSTALL += ""

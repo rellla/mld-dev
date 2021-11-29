@@ -1,5 +1,5 @@
 header:
-  version: 9
+  version: 10
 
 distro: mld
 
@@ -13,6 +13,8 @@ repos:
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
     refspec: gatesgarth 
+    layers:
+      meta:
 
   poky:
     url: https://git.yoctoproject.org/git/poky
@@ -71,7 +73,7 @@ local_conf_header:
     APPEND_normal := "${APPEND} splash vga=current quiet"
     #APPEND_normal += "loglevel=3 rd.systemd.show_status=auto rd.udev.log_level=3 vt.global_cursor_default=0"
 
-  initramfs: |
+  filesystems: |
     INITRAMFS_FSTYPES = "cpio.lzma"
     LIVE_ROOTFS_TYPE = "squashfs"
 

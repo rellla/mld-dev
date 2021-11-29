@@ -1,11 +1,17 @@
 header:
-  version: 9
+  version: 10
   includes: 
     - install.yml
 
 machine: raspberrypi2
 
 repos:
+  meta-mld:
+    url: https://gitlab.com/MLD-6/meta-mld.git
+    refspec: gatesgarth
+    layers:
+      meta-raspberry:
+
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
     refspec: hardknott

@@ -20,23 +20,24 @@ local_conf_header:
   plattform: |
     #PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"
     #PREFERRED_VERSION_linux-mainline ?= "5.10%"
-    PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
+    #PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
     VC4DTBO ?= "vc4-kms-v3d-pi4"
     #VC4DTBO ?= "vc4-fkms-v3d"
-    GPU_MEM ?= "512"
+    GPU_MEM ?= "320"
     MACHINE_FEATURES += "vc4graphics"
 
     #BOOT_SPACE = "1073741"
-    #INITRAMFS_MAXSIZE = "315400"
-    #IMAGE_FSTYPES = "btrfs"
-    #IMAGE_FSTYPES_append = " live"
-    #NOISO = "0"
-    #INITRAMFS_IMAGE = "image-minimal-initramfs"
-    #INITRAMFS_IMAGE_BUNDLE = "1"
+    IMAGE_FSTYPES = "rpi-sdimg"
+    SDIMG_ROOTFS_TYPE = "squashfs"
+    INITRAMFS_IMAGE = "core-image-minimal-initramfs"
+    # INITRAMFS_IMAGE_BUNDLE = "1"
 
   bootloader: |
-    #RPI_USE_U_BOOT = "1"  
+    #RPI_USE_U_BOOT = "1"
 
-  other: |
+  extra: |
     PREFERRED_VERSION_imagemagick = "6.%"
     #USER_CLASSES = "buildstats image-mklibs image-prelink"
+
+  packages: |
+    CORE_IMAGE_EXTRA_INSTALL += "xf86-video-fbdev"

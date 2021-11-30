@@ -16,10 +16,6 @@ repos:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
     refspec: hardknott
 
-  meta-qt5:
-    url: https://github.com/meta-qt5/meta-qt5/
-    refspec: hardknott
-
 local_conf_header:
   plattform: |
     USER_CLASSES = "buildstats image-mklibs image-prelink"

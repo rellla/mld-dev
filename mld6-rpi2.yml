@@ -18,12 +18,15 @@ repos:
 
 local_conf_header:
   plattform: |
-    USER_CLASSES = "buildstats image-mklibs image-prelink"
     #PREFERRED_VERSION_linux-raspberrypi ?= "5.4.%"
-    PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
+    #PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
+    IMAGE_FSTYPES = "rpi-sdimg"
+    SDIMG_ROOTFS_TYPE = "squashfs"
+    INITRAMFS_IMAGE = "core-image-minimal-initramfs"
            
   bootloader: |
-    RPI_USE_U_BOOT = "1"
+    #INITRAMFS_IMAGE_BUNDLE = "1"
+    #RPI_USE_U_BOOT = "1"
     
   rpi-specific: |
     #ENABLE_I2C = "1"
@@ -31,4 +34,4 @@ local_conf_header:
     VC4DTBO ?= "vc4-fkms-v3d"
     GPU_MEM ?= "256"
     MACHINE_FEATURES += "vc4graphics"
-    CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"
+    #CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"

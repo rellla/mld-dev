@@ -13,6 +13,3 @@ local_conf_header:
   # for p in $(wget "http://www.minidvblinux.de/site/show_landriver.php?list" -q -O -); do apt list 2>/dev/null | grep -q kernel-module-$p-[0-9] && echo -n "kernel-module-$p "; done
   networking: |
     CORE_IMAGE_EXTRA_INSTALL += "kernel-module-8139too kernel-module-alx kernel-module-asix kernel-module-ath9k kernel-module-atl1 kernel-module-atl1c kernel-module-atl1e kernel-module-atl2 kernel-module-jme kernel-module-pcnet32 kernel-module-r8169 kernel-module-realtek kernel-module-rt2800pci kernel-module-skge kernel-module-sky2 kernel-module-tg3"
-
-  packages: |
-    #CORE_IMAGE_EXTRA_INSTALL += "xf86-video-fbdev"

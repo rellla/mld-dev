@@ -9,6 +9,3 @@ local_conf_header:
   plattform: |
     IMAGE_FSTYPES += "iso"
 #    PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-dev"
-
-  packages: |
-    #CORE_IMAGE_EXTRA_INSTALL += ""

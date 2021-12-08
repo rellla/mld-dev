@@ -109,6 +109,7 @@ local_conf_header:
     LICENSE_FLAGS_WHITELIST = "commercial"
     SDKMACHINE = "x86_64"
     hostname_pn-base-files = "MLD"
+    SERIAL_CONSOLES = ""
 
   features: |
     IMAGE_FEATURES += "ssh-server-openssh"

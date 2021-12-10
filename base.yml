@@ -69,7 +69,7 @@ local_conf_header:
     EFI_PROVIDER = "systemd-boot"
 
   bootoptions: |
-    APPEND += "ro net.ifnames=0"
+    APPEND += "net.ifnames=0"
     APPEND_normal := "${APPEND} splash vga=current quiet"
     #APPEND_normal += "loglevel=3 rd.systemd.show_status=auto rd.udev.log_level=3 vt.global_cursor_default=0"
 

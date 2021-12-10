@@ -7,6 +7,13 @@ target:
   - mld-image-netinstall
   #- mld-image-base
 
+repos:
+  meta-openembedded:
+    url: http://git.openembedded.org/meta-openembedded
+    refspec: hardknott
+    layers:
+      meta-filesystems:
+
 local_conf_header:
   install: |
     DISTRO_FEATURES += "opengl"

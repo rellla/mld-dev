@@ -8,7 +8,7 @@ cd ${0%/*}
 git pull
 (cd meta-mld; git pull)
 
-export ${USER:-$(whoami)}
+export USER=${USER:-$(whoami)}
 
 for machine in x86 x86-qemu rpi2 rpi3 rpi4; do
   /usr/local/bin/kas build mld6-$machine.yml

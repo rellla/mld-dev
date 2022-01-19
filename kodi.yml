@@ -1,0 +1,21 @@
+header:
+  version: 1
+
+repos:
+  meta-kodi:
+    url: https://github.com/koenkooi/meta-kodi.git
+    refspec: hardknott 
+
+  meta-openembedded:
+    url: http://git.openembedded.org/meta-openembedded
+    refspec: hardknott
+    layers:
+      meta-multimedia:
+      
+  meta-intel:
+    url: git://git.yoctoproject.org/meta-intel    
+    refspec: hardknott
+
+local_conf_header:
+  kodi: |
+    DISTRO_FEATURES += "opengl"

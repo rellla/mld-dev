@@ -100,7 +100,7 @@ local_conf_header:
 
   locale: |
     # PACKAGE_NO_LOCALE = "1" # dies fasst alle Sprachen in einem Paket zusammen und wird in poky/meta/classes/package.bbclass ausgewertet. Hier könnte auch eine automatische Abhängigkeit zu den IMAGE_LINGUAS sprachen in alle Pakete eingebaut werden. Z.B.: d.setVar('RRECOMMENDS', (d.getVar('RRECOMMENDS') or "") + ' ' + pn + '-locale-de-de')
-    GLIBC_GENERATE_LOCALES = "en_GB.UTF-8 de_DE.UTF-8"
+    # GLIBC_GENERATE_LOCALES = "en_GB.UTF-8 de_DE.UTF-8"
     IMAGE_LINGUAS = "en-gb de-de"
     CORE_IMAGE_EXTRA_INSTALL += "tzdata"
     DEFAULT_TIMEZONE = "Europe/Berlin"

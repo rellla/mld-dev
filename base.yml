@@ -41,9 +41,10 @@ bblayers_conf_header:
     BBFILES ?= ""
 
 local_conf_header:
-#  prserv: |
-#    INHERIT += "buildhistory"
-#    BUILDHISTORY_COMMIT = "1"
+  autoinc_version: |
+    INHERIT += "buildhistory"
+    BUILDHISTORY_COMMIT = "1"
+    PRSERV_HOST = "localhost:0"
 
   shared_cache: |
     DL_DIR ?= "/home/share/downloads"

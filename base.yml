@@ -112,8 +112,10 @@ local_conf_header:
     SDKMACHINE = "x86_64"
     hostname_pn-base-files = "MLD"
     SERIAL_CONSOLES = ""
+    KERNEL_MODULE_PACKAGE_SPLIT = "0"
 
   features: |
+    CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"
     IMAGE_FEATURES += "ssh-server-openssh"
     CORE_IMAGE_EXTRA_INSTALL += "ca-certificates"
     CORE_IMAGE_EXTRA_INSTALL += "xf86-video-fbdev"

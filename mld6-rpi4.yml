@@ -40,3 +40,8 @@ local_conf_header:
     #CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"
     #PREFERRED_VERSION_imagemagick = "6.%"
     #USER_CLASSES = "buildstats image-mklibs image-prelink"
+
+  rpi-specific: |
+    #ENABLE_I2C = "1"
+    RPI_EXTRA_CONFIG = "dtparam=audio=on"
+      

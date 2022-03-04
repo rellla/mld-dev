@@ -32,7 +32,7 @@ repos:
       meta-python:
       meta-networking:
       meta-initramfs:
-#      meta-multimedia:
+      meta-multimedia:
 
 bblayers_conf_header:
   standard: |

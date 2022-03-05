@@ -13,7 +13,7 @@ repos:
 local_conf_header:
   plattform: |
     IMAGE_FSTYPES += "iso"
-#    PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-dev"
+    PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-dev"
 
   # for p in $(wget "http://www.minidvblinux.de/site/show_landriver.php?list" -q -O -); do apt list 2>/dev/null | grep -q kernel-module-$p-[0-9] && echo -n "kernel-module-$p "; done
   networking: |

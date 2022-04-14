@@ -18,7 +18,7 @@ repos:
 
 local_conf_header:
   plattform: |
-    #PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"
+    PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"
     #PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
 
     IMAGE_FSTYPES = "rpi-sdimg"
@@ -43,5 +43,9 @@ local_conf_header:
 
   rpi-specific: |
     #ENABLE_I2C = "1"
-    RPI_EXTRA_CONFIG = "dtparam=audio=on"
+    RPI_EXTRA_CONFIG = "\
+    dtoverlay=rpivid-v4l2 \n\
+    dtoverlay=gpio-ir \n\
+    dtparam=audio=on \n\
+      "
       

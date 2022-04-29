@@ -8,7 +8,7 @@ machine: genericx86-64
 repos:
   meta-intel:
     url: git://git.yoctoproject.org/meta-intel    
-    refspec: hardknott 
+    refspec: honister 
 
 local_conf_header:
   plattform: |

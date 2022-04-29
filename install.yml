@@ -10,7 +10,7 @@ target:
 repos:
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: hardknott
+    refspec: honister
     layers:
       meta-filesystems:
 

@@ -8,13 +8,13 @@ machine: raspberrypi3
 repos:
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    refspec: gatesgarth
+    refspec: honister
     layers:
       meta-raspberry:
 
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
-    refspec: hardknott
+    refspec: honister
 
 local_conf_header:
   plattform: |

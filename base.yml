@@ -12,13 +12,13 @@ target:
 repos:
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    refspec: gatesgarth 
+    refspec: honister 
     layers:
       meta:
 
   poky:
     url: https://git.yoctoproject.org/git/poky
-    refspec: hardknott
+    refspec: honister
     layers:
       meta:
       meta-poky:
@@ -26,7 +26,7 @@ repos:
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: hardknott
+    refspec: honister
     layers:
       meta-oe:
       meta-python:
@@ -71,7 +71,7 @@ local_conf_header:
 
   bootoptions: |
     APPEND += "net.ifnames=0"
-    APPEND_append_normal += "vt.global_cursor_default=0 splash vga=current quiet"
+    APPEND:append_normal = "vt.global_cursor_default=0 splash vga=current quiet"
     #APPEND_append_normal += "loglevel=3 rd.systemd.show_status=auto rd.udev.log_level=3"
 
   filesystems: |

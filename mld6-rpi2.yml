@@ -29,7 +29,7 @@ local_conf_header:
     GPU_MEM ?= "256"
     DISABLE_RPI_BOOT_LOGO = "1"
 
-    RPI_EXTRA_CONFIG = 'dtparam=i2c=on,i2s=on,spi=on,audio=on \n max_usb_current=1 \n \'
+    RPI_EXTRA_CONFIG = 'dtparam=i2c=on,i2s=on,spi=on,audio=on \nmax_usb_current=1 \n \'
     
     MACHINE_FEATURES += "vc4graphics"
 

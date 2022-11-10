@@ -27,7 +27,7 @@ local_conf_header:
 
     VC4DTBO ?= ""
     GPU_MEM ?= "256"
-    DISABLE_RPI_BOOT_LOGO = "1"
+    #DISABLE_RPI_BOOT_LOGO = "1"
 
     RPI_EXTRA_CONFIG = 'dtparam=i2c=on,i2s=on,spi=on,audio=on \nmax_usb_current=1 \n \'
     

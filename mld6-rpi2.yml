@@ -16,6 +16,7 @@ repos:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
     refspec: honister
 
+
 local_conf_header:
   plattform: |
     #PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"

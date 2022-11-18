@@ -11,7 +11,7 @@ repos:
     refspec: honister
     layers:
       meta-raspberry:
-
+    
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
     refspec: honister

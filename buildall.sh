@@ -22,7 +22,7 @@ for machine in x86 x86-qemu rpi2 rpi3 rpi4; do
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake package-index"
 done
 
-for machine in bpi cubietruck rock-pi-4 ; do
+for machine in bpi rock-pi-4 ; do
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build mld-image-boot"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-oscam"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake package-index"

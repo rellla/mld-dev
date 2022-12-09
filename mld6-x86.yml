@@ -14,7 +14,10 @@ local_conf_header:
   plattform: |
     IMAGE_FSTYPES += "iso"
     PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto"
+
+  xorg: |
     PACKAGECONFIG:append:pn-xserver-xorg = " xinerama"
+    CORE_IMAGE_EXTRA_INSTALL += "xorg-driver-detect"
 
   # for p in $(wget "http://www.minidvblinux.de/site/show_landriver.php?list" -q -O -); do apt list 2>/dev/null | grep -q kernel-module-$p-[0-9] && echo -n "kernel-module-$p "; done
   networking: |

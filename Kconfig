@@ -1,0 +1,37 @@
+# Authors:
+#  Roland Fehr <roland@diefehrs.de>
+#
+
+mainmenu "MLD Image Configuration"
+
+config KAS_BUILD_SYSTEM
+	string
+	default "openembedded"
+ 
+choice
+	prompt "Image type"
+	default mld-image-netinstall
+
+config mld-image-netinstall-x86
+	bool "net install image x86"
+	help
+    net install image for x86 system
+
+config mld-image-netinstall-x86-qemu
+	bool "net install image x86-qemu"
+	help
+    net install image for x86 system
+    
+config mld-image-bananapi-boot
+	bool "boot install image bananapi"
+	help
+	  Boot image for bananapi.
+     
+endchoice
+
+config KAS_INCLUDE_MAIN
+	string
+	default "mld6-x86.yml" if mld-image-netinstall
+	default "mld6-x86-qemu.yml" if mld-image-netinstall-x86-qemu
+	default "mld6-bpi.yml" if mld-image-bananapi-boot
+

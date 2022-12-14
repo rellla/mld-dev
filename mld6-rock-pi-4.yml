@@ -8,7 +8,7 @@ machine: rock-pi-4b
 repos:
   meta-arm:
     url: git://git.yoctoproject.org/meta-arm
-    refspec: honister
+    refspec: kirkstone
     layers:
       meta-arm:
       meta-arm-toolchain:
@@ -16,13 +16,13 @@ repos:
 
   meta-rockchip:
      url: git://git.yoctoproject.org/meta-rockchip
-     refspec: honister
+     refspec: kirkstone
      #url: https://github.com/rockchip-linux/meta-rockchip.git
      #refspec: yocto-next
 
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    refspec: honister
+    refspec: kirkstone
     layers:
       meta:
       

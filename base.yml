@@ -12,7 +12,7 @@ target:
 repos:
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    refspec: honister 
+    refspec: kirkstone 
     layers:
       meta:
 

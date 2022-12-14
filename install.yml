@@ -10,11 +10,11 @@ target:
 repos:
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: honister
+    refspec: kirkstone
     layers:
       meta-filesystems:
 
 local_conf_header:
   install: |
     DISTRO_FEATURES += "opengl"
-    PREFERRED_VERSION_nodejs = "14.%"
+    PREFERRED_VERSION_nodejs = "16.%"

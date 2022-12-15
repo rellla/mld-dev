@@ -18,7 +18,7 @@ repos:
 
 local_conf_header:
   plattform: |
-    PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"
+    #PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"
     #PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
 
     IMAGE_FSTYPES = "rpi-sdimg"

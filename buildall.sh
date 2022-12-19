@@ -25,6 +25,6 @@ done
 
 for machine in bpi cubietruck; do
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build mld-image-boot"
-  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-oscam"
+  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-extra"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake package-index"
 done

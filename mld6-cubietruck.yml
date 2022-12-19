@@ -18,6 +18,6 @@ local_conf_header:
   machine: |
     DISTRO_FEATURES:append = " opengl"
   plattform: |
-    USER_CLASSES = "buildstats image-prelink"
+    USER_CLASSES = " buildstats"
     #PREFERRED_VERSION_linux-mainline ?= "5.4%"
     #PREFERRED_VERSION_linux-sunxi ?= "3.4%"

@@ -25,7 +25,8 @@ repos:
     refspec: kirkstone
     layers:
       meta:
-      
+      meta-raspberry:
+            
 local_conf_header:
   plattform: |
     #USER_CLASSES = "buildstats image-prelink"

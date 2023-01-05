@@ -25,7 +25,7 @@ repos:
     refspec: kirkstone
     layers:
       meta:
-      meta-raspberry:
+      meta-arm:
             
 local_conf_header:
   plattform: |

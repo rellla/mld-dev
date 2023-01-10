@@ -4,7 +4,7 @@ header:
 repos:
   meta-kodi:
     url: https://github.com/koenkooi/meta-kodi.git
-    refspec: kirkstone 
+    refspec: master 
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded

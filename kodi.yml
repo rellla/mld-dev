@@ -4,17 +4,17 @@ header:
 repos:
   meta-kodi:
     url: https://github.com/koenkooi/meta-kodi.git
-    refspec: hardknott 
+    refspec: kirkstone 
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: hardknott
+    refspec: kirkstone
     layers:
       meta-multimedia:
       
   meta-intel:
     url: git://git.yoctoproject.org/meta-intel    
-    refspec: hardknott
+    refspec: kirkstone
 
 local_conf_header:
   kodi: |

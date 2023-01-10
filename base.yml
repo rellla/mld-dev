@@ -127,4 +127,4 @@ local_conf_header:
     #DISTRO_FEATURES += "opengl"
     #DISTRO_FEATURES += "vulkan"
     #DISTRO_FEATURES += "directfb"
-    #DISTRO_FEATURES += "kms"
+    DISTRO_FEATURES += "pam"

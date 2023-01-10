@@ -2,6 +2,7 @@ header:
   version: 9
   includes: 
     - install.yml
+    - kodi.yml
 
 machine: genericx86-64
 

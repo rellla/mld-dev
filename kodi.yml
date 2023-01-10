@@ -3,8 +3,8 @@ header:
 
 repos:
   meta-kodi:
-    url: https://github.com/koenkooi/meta-kodi.git
-    refspec: master 
+    url: https://gitlab.com/rofehr/meta-kodi.git
+    refspec: kirkstone 
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded

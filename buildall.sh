@@ -19,6 +19,8 @@ for machine in x86 ; do
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-kernel-modules"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-tools"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-vdr"
+  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build kodi"
+  
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake package-index"
 done
 

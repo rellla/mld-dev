@@ -16,7 +16,7 @@ local_conf_header:
     PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto"
 
   xorg: |
-    CORE_IMAGE_EXTRA_INSTALL += "xorg-driver-detect"
+    CORE_IMAGE_EXTRA_INSTALL += "xorg-driver-detect kmod-8168"
 
   # for p in $(wget "http://www.minidvblinux.de/site/show_landriver.php?list" -q -O -); do apt list 2>/dev/null | grep -q kernel-module-$p-[0-9] && echo -n "kernel-module-$p "; done
   networking: |

@@ -128,3 +128,4 @@ local_conf_header:
     #DISTRO_FEATURES += "vulkan"
     #DISTRO_FEATURES += "directfb"
     DISTRO_FEATURES += "pam"
+    DISTRO_FEATURES += "wifi"

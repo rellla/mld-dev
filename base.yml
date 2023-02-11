@@ -119,7 +119,7 @@ local_conf_header:
     KERNEL_SPLIT_MODULES = "0"
 
   features: |
-    CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"
+    CORE_IMAGE_EXTRA_INSTALL += "kernel-modules kernel"
     IMAGE_FEATURES += "ssh-server-openssh"
     CORE_IMAGE_EXTRA_INSTALL += "ca-certificates"
     CORE_IMAGE_EXTRA_INSTALL += "xf86-video-fbdev"

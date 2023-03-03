@@ -22,6 +22,8 @@ for machine in x86 x86-qemu rpi2 rpi3 rpi4 rock-pi-4; do
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-gstreamer"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-tools"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-vdr"
+  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-debug"
+  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-webbrowser"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake package-index"
 done
 

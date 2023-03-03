@@ -29,8 +29,13 @@ local_conf_header:
     VC4DTBO ?= "vc4-fkms-v3d"
     GPU_MEM ?= "320"
     MACHINE_FEATURES += "vc4graphics"
-
     #ENABLE_I2C = "1"
+
+    RPI_EXTRA_CONFIG = "\
+    dtoverlay=rpivid-v4l2 \n\
+    dtoverlay=gpio-ir \n\
+    dtparam=audio=on \n\
+    "
 
   bootloader: |
     #INITRAMFS_IMAGE_BUNDLE = "1"
@@ -40,12 +45,3 @@ local_conf_header:
     #CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"
     #PREFERRED_VERSION_imagemagick = "6.%"
     #USER_CLASSES = "buildstats image-mklibs image-prelink"
-
-  rpi-specific: |
-    #ENABLE_I2C = "1"
-    RPI_EXTRA_CONFIG = "\
-    dtoverlay=rpivid-v4l2 \n\
-    dtoverlay=gpio-ir \n\
-    dtparam=audio=on \n\
-      "
-      

@@ -27,14 +27,16 @@ local_conf_header:
 
     VC4DTBO ?= ""
     GPU_MEM ?= "256"
-    #DISABLE_RPI_BOOT_LOGO = "1"
-
-    RPI_EXTRA_CONFIG = 'dtparam=i2c=on,i2s=on,spi=on,audio=on \nmax_usb_current=1 \n \'
-    
     MACHINE_FEATURES += "vc4graphics"
-
+    #DISABLE_RPI_BOOT_LOGO = "1"
     #ENABLE_I2C = "1"
-           
+
+    RPI_EXTRA_CONFIG = "\
+    max_usb_current=1 \n\
+    dtoverlay=gpio-ir \n\
+    dtparam=i2c=on,i2s=on,spi=on,audio=on \n\
+    "
+
   bootloader: |
     #INITRAMFS_IMAGE_BUNDLE = "1"
     #RPI_USE_U_BOOT = "1"

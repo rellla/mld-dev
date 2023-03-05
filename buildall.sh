@@ -10,11 +10,6 @@ git pull
 
 export USER=${USER:-$(whoami)}
 
-for machine in x86; do
-  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-kernel-modules"
-  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-webbrowser"
-done
-
 for machine in x86 x86-qemu rpi2 rpi3 rpi4 rock-pi-4; do
   /usr/local/bin/kas build mld6-$machine.yml
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-addons"
@@ -30,5 +25,11 @@ done
 for machine in bpi cubietruck; do
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build mld-image-boot"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-extra"
+  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake package-index"
+done
+
+for machine in x86; do
+  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-kernel-modules"
+  /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-webbrowser"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake package-index"
 done

@@ -12,5 +12,5 @@ repos:
 
 local_conf_header:
   plattform: |
-    USER_CLASSES = " buildstats"
+    #USER_CLASSES = " buildstats"
     #PREFERRED_VERSION_linux-mainline ?= "5.15%"

@@ -2,6 +2,7 @@ header:
   version: 1
   includes: 
     - base.yml
+    - local-user.yml
 
 target:
   - mld-image-netinstall

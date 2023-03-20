@@ -1,8 +1,7 @@
 header:
   version: 10
-  includes: 
-  - local-user.yml
-  
+
+distro: mld
 
 env: 
   USER: none

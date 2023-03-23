@@ -64,6 +64,7 @@ local_conf_header:
   shared_cache: |
     DL_DIR ?= "/home/share/downloads"
     SSTATE_DIR ?= "/home/share/sstate-cache"
+    #INHERIT += "ccache"
 
   diskmon: |
     BB_DISKMON_DIRS = "\
@@ -79,7 +80,7 @@ local_conf_header:
   bootloader: |
     LABELS = "normal verbose"
     SYSLINUX_SERIAL = ""
-    SYSLINUX_SPLASH = "${TOPDIR}/../meta-mld/meta/files/splash.png"
+    SYSLINUX_SPLASH = "${TOPDIR}/../meta-mld/meta/files/splash-800x600.png"
     SYSLINUX_OPTS = "menu RESOLUTION 800 600;menu WIDTH 28;menu MARGIN 1;menu ROWS 6;menu HSHIFT 35;menu VSHIFT 19;menu TABMSGROW -1;menu CMDLINEROW -1;menu TIMEOUTROW 20;menu CLEAR;menu HIDDEN;menu color screen * #00ffffff #00ffffff none;menu color border * #00ffffff #00ffffff none;menu color title * #00ffffff #00ffffff none;menu color unsel * #88ffffff #00ffffff none;menu color sel * #ffffffff #ffc00000 none;menu color disabled * #09ffffff #00ffffff none;menu color tabmsg * #09ffffff #00ffffff none;menu color cmdline * #88ffffff #00ffffff none;menu color timeout * #09ffffff #00ffffff none;menu color timeout_msg * #09ffffff #00ffffff none"
     SYSTEMD_BOOT_TIMEOUT = "5"
     EFI_PROVIDER = "systemd-boot"
@@ -87,7 +88,7 @@ local_conf_header:
   bootoptions: |
     APPEND = "net.ifnames=0"
     APPEND:append:normal = " vt.global_cursor_default=0 vga=current quiet splash"
-    APPEND:append:normal = " loglevel=3 rd.systemd.show_status=auto rd.udev.log_level=3"
+    APPEND:append:normal = " loglevel=3 systemd.show_status=auto udev.log_level=3"
 
   filesystems: |
     INITRAMFS_FSTYPES = "cpio.lzma"

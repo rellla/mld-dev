@@ -109,7 +109,7 @@ local_conf_header:
   package-management: |
     PACKAGE_CLASSES = "package_deb"
     EXTRA_IMAGE_FEATURES += "package-management"
-    PACKAGE_FEED_URIS = "http://mld6.minidvblinux.de/${USER}/deb"
+    PACKAGE_FEED_URIS = "https://mld6.minidvblinux.de/${USER}/deb"
 
   login: |
     #EXTRA_IMAGE_FEATURES += "empty-root-password allow-empty-password"

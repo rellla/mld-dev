@@ -1,0 +1,36 @@
+header:
+  version: 9
+  includes: 
+    - install.yml
+
+machine: tinker-board
+
+repos:
+  meta-arm:
+    url: git://git.yoctoproject.org/meta-arm
+    refspec: kirkstone
+    layers:
+      meta-arm:
+      meta-arm-toolchain:
+      meta-arm-bsp:
+
+  meta-rockchip:
+     url: git://git.yoctoproject.org/meta-rockchip
+     refspec: kirkstone
+
+  meta-mld:
+    url: https://gitlab.com/MLD-6/meta-mld.git
+    refspec: kirkstone
+    layers:
+      meta:
+      meta-arm:
+            
+local_conf_header:
+  plattform: |
+    #USER_CLASSES = "buildstats image-prelink"
+    RK_CONSOLE_DEVICE = "ttyS2"
+    RK_CONSOLE_BAUD = "1500000"
+    #PREFERRED_VERSION_linux-yocto = "5.15%"
+    PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-dev"
+
+    IMAGE_FSTYPES = "ext4 wic.bz2"

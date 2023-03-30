@@ -10,7 +10,7 @@ git pull
 
 export USER=${USER:-$(whoami)}
 
-for machine in x86 x86-qemu rpi2 rpi3 rpi4 rock-pi-4 tinker-board; do
+for machine in x86 x86-qemu rpi2 rpi3 rpi4 rock-pi-4 tinker-board tinker-board-s; do
   /usr/local/bin/kas build mld6-$machine.yml
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-addons"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-alsa"
@@ -29,7 +29,7 @@ for machine in bpi cubietruck; do
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake package-index"
 done
 
-for machine in x86 x86-qemu rpi2 rpi3 rpi4 rock-pi-4 tinker-board; do
+for machine in x86 x86-qemu rpi2 rpi3 rpi4 rock-pi-4 tinker-board tinker-board-s; do
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-kernel-modules"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake --runall build packagegroup-webbrowser"
   /usr/local/bin/kas shell mld6-$machine.yml -c "bitbake package-index"

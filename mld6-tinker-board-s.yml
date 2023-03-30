@@ -3,7 +3,7 @@ header:
   includes: 
     - install.yml
 
-machine: tinker-board
+machine: tinker-board-s
 
 repos:
   meta-arm:

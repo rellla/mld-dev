@@ -128,7 +128,7 @@ local_conf_header:
     CONF_VERSION = "1"
     LICENSE_FLAGS_ACCEPTED = "commercial"
     SDKMACHINE = "x86_64"
-    hostname:pn-base-files = "MLD"
+    hostname:pn-base-files = ""
     SERIAL_CONSOLES = ""
     KERNEL_SPLIT_MODULES = "0"
 

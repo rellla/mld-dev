@@ -38,8 +38,9 @@ local_conf_header:
     "
 
   bootloader: |
-    #INITRAMFS_IMAGE_BUNDLE = "1"
-    #RPI_USE_U_BOOT = "1"
+    RPI_USE_U_BOOT = "1"
+    INITRAMFS_FSTYPES:append = ".u-boot"
+    DEPLOYPAYLOAD += "splash.bmp"
     
   extra: |
     #CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"

@@ -2,19 +2,20 @@ header:
   version: 10
   includes: 
     - install.yml
+    - docker.yml
     
 machine: raspberrypi3
 
 repos:
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    refspec: kirkstone
+    branch: kirkstone
     layers:
       meta-raspberry:
     
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
-    refspec: kirkstone
+    branch: kirkstone
 
 local_conf_header:
   plattform: |

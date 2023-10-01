@@ -12,13 +12,13 @@ target:
 repos:
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    refspec: kirkstone 
+    branch: kirkstone 
     layers:
       meta:
 
   poky:
     url: https://git.yoctoproject.org/git/poky
-    refspec: kirkstone
+    branch: kirkstone
     layers:
       meta:
       meta-poky:
@@ -26,7 +26,7 @@ repos:
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: kirkstone
+    branch: kirkstone
     layers:
       meta-oe:
       meta-python:
@@ -36,18 +36,18 @@ repos:
 
   meta-qt5:
     url: https://github.com/meta-qt5/meta-qt5.git
-    refspec: kirkstone
+    branch: kirkstone
   
   meta-browser:
     url: https://github.com/OSSystems/meta-browser.git
-    refspec: 2f5fe79935e1f5350f9e487625343a8f27b165d3 
+    commit: 2f5fe79935e1f5350f9e487625343a8f27b165d3 
     layers:
       meta-chromium:
       meta-firefox:
       
   meta-clang:
     url: https://github.com/kraj/meta-clang.git
-    refspec: kirkstone     
+    branch: kirkstone     
     
 bblayers_conf_header:
   standard: |

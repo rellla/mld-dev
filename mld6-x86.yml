@@ -2,6 +2,7 @@ header:
   version: 9
   includes: 
     - install.yml
+    - docker.yml
 
 machine: genericx86-64
 
@@ -9,6 +10,10 @@ repos:
   meta-intel:
     url: git://git.yoctoproject.org/meta-intel
     refspec: kirkstone 
+
+  meta-virtualization:
+    url: https://git.yoctoproject.org/meta-virtualization
+    branch: kirkstone
 
 
 local_conf_header:

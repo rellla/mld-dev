@@ -1,0 +1,11 @@
+header:
+  version: 1
+
+repos:
+  meta-virtualization:
+    url: https://git.yoctoproject.org/meta-virtualization
+    branch: kirkstone
+
+local_conf_header:
+  docker: |
+    DISTRO_FEATURES += "seccomp virtualization"

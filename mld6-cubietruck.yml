@@ -8,11 +8,11 @@ machine: cubietruck
 repos:
   meta-sunxi:
     url: https://github.com/linux-sunxi/meta-sunxi.git
-    refspec: kirkstone
+    branch: kirkstone
 
   meta-qt5:
     url: https://github.com/meta-qt5/meta-qt5/
-    refspec: kirkstone
+    branch: kirkstone
 
 local_conf_header:
   machine: |

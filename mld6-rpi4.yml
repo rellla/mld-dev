@@ -2,19 +2,21 @@ header:
   version: 10
   includes:
     - install.yml
+    - docker.yml
     
 machine: raspberrypi4
 
 repos:
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    refspec: kirkstone
+    branch: kirkstone
     layers:
       meta-raspberry:
 
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
-    refspec: kirkstone
+    branch: kirkstone
+
 
 local_conf_header:
   plattform: |
@@ -36,7 +38,7 @@ local_conf_header:
     dtoverlay=gpio-ir \n\
     dtparam=audio=on \n\
     "
-
+    
   bootloader: |
     # RPI_USE_U_BOOT = "1"
     # INITRAMFS_FSTYPES:append = ".u-boot"

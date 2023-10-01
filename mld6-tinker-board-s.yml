@@ -2,13 +2,14 @@ header:
   version: 9
   includes: 
     - install.yml
+    - docker.yml
 
 machine: tinker-board-s
 
 repos:
   meta-arm:
     url: git://git.yoctoproject.org/meta-arm
-    refspec: kirkstone
+    branch: kirkstone
     layers:
       meta-arm:
       meta-arm-toolchain:
@@ -16,11 +17,11 @@ repos:
 
   meta-rockchip:
      url: git://git.yoctoproject.org/meta-rockchip
-     refspec: kirkstone
+     branch: kirkstone
 
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    refspec: kirkstone
+    branch: kirkstone
     layers:
       meta:
       meta-arm:

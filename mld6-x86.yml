@@ -9,7 +9,7 @@ machine: genericx86-64
 repos:
   meta-intel:
     url: git://git.yoctoproject.org/meta-intel
-    refspec: kirkstone 
+    branch: kirkstone 
 
   meta-virtualization:
     url: https://git.yoctoproject.org/meta-virtualization

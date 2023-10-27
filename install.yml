@@ -14,6 +14,7 @@ repos:
     branch: kirkstone
     layers:
       meta-filesystems:
+      meta-webserver:
 
 local_conf_header:
   install: |

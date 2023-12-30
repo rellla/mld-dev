@@ -52,3 +52,6 @@ local_conf_header:
     #CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"
     #PREFERRED_VERSION_imagemagick = "6.%"
     #USER_CLASSES = "buildstats image-mklibs image-prelink"
+
+  networking: |
+    CORE_IMAGE_EXTRA_INSTALL += "linux-firmware-bcm43455"

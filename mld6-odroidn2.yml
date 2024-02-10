@@ -1,0 +1,33 @@
+header:
+  version: 9
+  includes: 
+    - install.yml
+
+machine: odroid-n2
+
+repos:
+  meta-odroid:
+     url: https://github.com/akuster/meta-odroid.git
+     branch: kirkstone
+     layers:
+       ../meta-odroid:
+       meta-odroid-extras:
+       
+  meta-mld:
+    url: https://gitlab.com/MLD-6/meta-mld.git
+    branch: kirkstone
+    layers:
+      meta:
+                  
+local_conf_header:
+  plattform: |
+    #USER_CLASSES = "buildstats image-prelink"
+    #RK_CONSOLE_DEVICE = "ttyS2"
+    #RK_CONSOLE_BAUD = "1500000"
+    #PREFERRED_VERSION_linux-yocto = "4.9%"
+    #PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto"
+    USE_BOOTSRC = "0"
+    IMAGE_FSTYPES = "ext4 wic.bz2"
+    MACHINE_FEATURES += "emmc"
+    MACHINE_FEATURES += "lima"
+    DISTRO_FEATURES += "x11"

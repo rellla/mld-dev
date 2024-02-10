@@ -3,6 +3,8 @@ header:
   includes: 
     - install.yml
     - docker.yml
+#    - chromium.yml
+#    - firefox.yml
 
 machine: genericx86-64
 
@@ -10,10 +12,6 @@ repos:
   meta-intel:
     url: git://git.yoctoproject.org/meta-intel
     branch: kirkstone 
-
-  meta-virtualization:
-    url: https://git.yoctoproject.org/meta-virtualization
-    branch: kirkstone
 
 
 local_conf_header:

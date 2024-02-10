@@ -8,4 +8,4 @@ repos:
 
 local_conf_header:
   docker: |
-    DISTRO_FEATURES += "seccomp virtualization"
+    DISTRO_FEATURES += "seccomp virtualization ipv6"

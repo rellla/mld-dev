@@ -2,6 +2,9 @@ header:
   version: 9
   includes: 
     - install.yml
+    - docker.yml
+#    - chromium.yml
+#    - firefox.yml
 
 machine: qemux86-64
 

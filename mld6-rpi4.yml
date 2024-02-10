@@ -17,11 +17,6 @@ repos:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
     branch: kirkstone
 
-  meta-java:
-    url: git://git.yoctoproject.org/meta-java
-    branch: kirkstone
-
-
 local_conf_header:
   plattform: |
     #PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"

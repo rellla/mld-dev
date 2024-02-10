@@ -12,12 +12,6 @@ repos:
      layers:
        ../meta-odroid:
        meta-odroid-extras:
-       
-  meta-mld:
-    url: https://gitlab.com/MLD-6/meta-mld.git
-    branch: kirkstone
-    layers:
-      meta:
                   
 local_conf_header:
   plattform: |

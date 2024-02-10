@@ -49,6 +49,10 @@ repos:
     url: https://github.com/kraj/meta-clang.git
     branch: kirkstone     
     
+  meta-java:
+    url: git://git.yoctoproject.org/meta-java
+    branch: kirkstone
+
 bblayers_conf_header:
   standard: |
     POKY_BBLAYERS_CONF_VERSION = "2"

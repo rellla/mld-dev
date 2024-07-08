@@ -12,13 +12,13 @@ target:
 repos:
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    branch: kirkstone 
+    branch: scarthgap
     layers:
       meta:
 
   poky:
     url: https://git.yoctoproject.org/git/poky
-    branch: kirkstone
+    branch: scarthgap
     layers:
       meta:
       meta-poky:
@@ -26,7 +26,7 @@ repos:
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    branch: kirkstone
+    branch: scarthgap
     layers:
       meta-oe:
       meta-python:
@@ -36,22 +36,22 @@ repos:
 
   meta-qt5:
     url: https://github.com/meta-qt5/meta-qt5.git
-    branch: kirkstone
+    branch: scarthgap
   
   meta-browser:
     url: https://github.com/OSSystems/meta-browser.git
-    commit: 2f5fe79935e1f5350f9e487625343a8f27b165d3 
+    commit: 83cb90c618e24af9bc40fb25baab2a0acd47a560 
     layers:
       meta-chromium:
       meta-firefox:
       
   meta-clang:
     url: https://github.com/kraj/meta-clang.git
-    branch: kirkstone     
+    branch: scarthgap     
     
   meta-java:
     url: git://git.yoctoproject.org/meta-java
-    branch: kirkstone
+    branch: scarthgap
 
 bblayers_conf_header:
   standard: |
@@ -148,3 +148,4 @@ local_conf_header:
     #DISTRO_FEATURES += "directfb"
     DISTRO_FEATURES += "pam"
     DISTRO_FEATURES += "wifi"
+    DISTRO_FEATURES += "usrmerge"

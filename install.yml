@@ -11,7 +11,7 @@ target:
 repos:
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    branch: kirkstone
+    branch: scarthgap
     layers:
       meta-filesystems:
       meta-webserver:

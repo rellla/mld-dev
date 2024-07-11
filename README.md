@@ -32,7 +32,12 @@ kas shell mld6-x86.yml
 ```
 then all normal bitbake functions can be used. 
 
-6.) Update package index (e.g. for apt) 
+6.) Compile VDR Plugins new (incl. VDR) 
+```
+kas shell mld6-x86.yml -c "bitbake --runall build packagegroup-vdr"
+```
+
+7.) Update package index (e.g. for apt) 
 ```
 kas shell mld6-x86.yml -c "bitbake package-index"
 ```

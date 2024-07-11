@@ -9,19 +9,19 @@ machine: hardkernel-odroidn2plus
 repos:
   meta-meson:
      url: https://github.com/superna9999/meta-meson.git
-     branch: kirkstone
-  
+     branch: scarthgap
+
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    branch: kirkstone
+    branch: scarthgap
     layers:
       meta-raspberry:
 
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
-    branch: kirkstone
+    branch: scarthgap
 
-                  
+
 local_conf_header:
   plattform: |
     #USER_CLASSES = "buildstats image-prelink"

@@ -9,7 +9,7 @@ machine: rock-pi-4b
 repos:
   meta-arm:
     url: git://git.yoctoproject.org/meta-arm
-    branch: kirkstone
+    branch: scarthgap
     layers:
       meta-arm:
       meta-arm-toolchain:
@@ -17,13 +17,13 @@ repos:
 
   meta-rockchip:
      url: git://git.yoctoproject.org/meta-rockchip
-     branch: kirkstone
+     branch: scarthgap
      #url: https://github.com/rockchip-linux/meta-rockchip.git
      #refspec: yocto-next
 
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    branch: kirkstone
+    branch: scarthgap
     layers:
       meta-arm:
 

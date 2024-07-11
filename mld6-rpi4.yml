@@ -9,13 +9,13 @@ machine: raspberrypi4
 repos:
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git
-    branch: kirkstone
+    branch: scarthgap
     layers:
       meta-raspberry:
 
   meta-raspberry:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
-    branch: kirkstone
+    branch: scarthgap
 
 local_conf_header:
   plattform: |

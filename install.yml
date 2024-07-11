@@ -19,4 +19,4 @@ repos:
 local_conf_header:
   install: |
     DISTRO_FEATURES += "opengl"
-    PREFERRED_VERSION_nodejs = "16.%"
+    PREFERRED_VERSION_nodejs = "20.%"

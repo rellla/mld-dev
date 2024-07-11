@@ -10,7 +10,7 @@ repos:
 
   meta-clang:
     url: http://github.com/kraj/meta-clang
-    refspec: hardknott
+    refspec: scarthgap
 
 #  openembedded-core:
 #    url: http://git.openembedded.org/openembedded-core

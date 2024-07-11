@@ -4,17 +4,17 @@ header:
 repos:
   meta-kodi:
     url: https://gitlab.com/rofehr/meta-kodi.git
-    refspec: kirkstone 
+    refspec: scarthgap
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: kirkstone
+    refspec: scarthgap
     layers:
       meta-multimedia:
       
   meta-intel:
     url: git://git.yoctoproject.org/meta-intel    
-    refspec: kirkstone
+    refspec: scarthgap
 
 local_conf_header:
   kodi: |

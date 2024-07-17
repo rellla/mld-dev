@@ -10,7 +10,9 @@ git pull
 
 export USER=${USER:-$(whoami)}
 
-for machine in x86 x86-qemu rpi2 rpi3 rpi4 rock-pi-4 tinker-board tinker-board-s odroidn2plus-hardkernel; do
+#for machine in x86 x86-qemu rpi2 rpi3 rpi4 rock-pi-4 tinker-board tinker-board-s odroidn2plus-hardkernel; do
+#for machine in odroidn2l-hardkernel; do
+for machine in odroidn2plus-hardkernel; do
   kas build mld6-$machine.yml
   kas shell mld6-$machine.yml -c "bitbake -k --runall build packagegroup-all"
   kas shell mld6-$machine.yml -c "bitbake -k --runall build packagegroup-core-nfs"

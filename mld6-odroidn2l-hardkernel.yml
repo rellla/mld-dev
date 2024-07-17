@@ -1,0 +1,40 @@
+header:
+  version: 9
+  includes: 
+    - install.yml
+    - docker.yml
+
+machine: hardkernel-odroid-n2l
+
+repos:
+  meta-meson:
+     url: https://github.com/superna9999/meta-meson.git
+     branch: master
+
+  meta-mld:
+    url: https://gitlab.com/MLD-6/meta-mld.git
+    branch: scarthgap
+    layers:
+      meta-raspberry:
+
+  meta-raspberry:
+    url: https://git.yoctoproject.org/git/meta-raspberrypi
+    branch: scarthgap
+
+
+local_conf_header:
+  plattform: |
+    #USER_CLASSES = "buildstats image-prelink"
+    #RK_CONSOLE_DEVICE = "ttyS2"
+    #RK_CONSOLE_BAUD = "1500000"
+    #PREFERRED_VERSION_linux-yocto = "4.9%"
+    #PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto"
+    USE_BOOTSRC = "0"
+    IMAGE_FSTYPES = "squashfs wic.bz2 wic"
+    MACHINE_FEATURES += "emmc"
+    MACHINE_FEATURES += "lima"
+    DISTRO_FEATURES += "x11"
+    UNPACKDIR = "${WORKDIR}/"
+  extra: |
+    #Provide 1 Gb extra disk space for testing purposes
+    IMAGE_ROOTFS_EXTRA_SPACE = "1048576"

@@ -9,7 +9,7 @@ machine: hardkernel-odroidn2plus
 repos:
   meta-meson:
      url: https://github.com/superna9999/meta-meson.git
-     branch: master
+     branch: scarthgap
 
   meta-mld:
     url: https://gitlab.com/MLD-6/meta-mld.git

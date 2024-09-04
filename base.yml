@@ -136,6 +136,7 @@ local_conf_header:
     hostname:pn-base-files = ""
     SERIAL_CONSOLES = ""
     KERNEL_SPLIT_MODULES = "0"
+    ROOT_HOME = "/root"
 
   features: |
     CORE_IMAGE_EXTRA_INSTALL += "kernel-modules kernel"

@@ -1,0 +1,197 @@
+{
+  "imager": {
+    "devices": [
+      {
+        "name": "No filtering",
+        "tags": [],
+        "default": true,
+        "description": "Show every possible image",
+        "matching_type": "inclusive"
+      },
+      {
+        "name": "Raspberry Pi 5",
+        "tags": [
+          "pi5-64bit",
+          "pi5-32bit"
+        ],
+        "default": false,
+        "icon": "https://downloads.raspberrypi.com/imager/icons/RPi_5.png",
+        "description": "Model B",
+        "matching_type": "exclusive"
+      },
+      {
+        "name": "Raspberry Pi 4",
+        "tags": [
+          "pi4-64bit",
+          "pi4-32bit"
+        ],
+        "default": false,
+        "icon": "https://downloads.raspberrypi.com/imager/icons/RPi_4.png",
+        "description": "Models B, 400, and Compute Modules 4, 4S",
+        "matching_type": "inclusive"
+      },
+      {
+        "name": "Raspberry Pi 3",
+        "tags": [
+          "pi3-64bit",
+          "pi3-32bit"
+        ],
+        "default": false,
+        "icon": "https://downloads.raspberrypi.com/imager/icons/RPi_3.png",
+        "description": "Models B, A+, B+, and Compute Module 3, 3+",
+        "matching_type": "inclusive"
+      },
+      {
+        "name": "Raspberry Pi 2",
+        "tags": [
+          "pi2-32bit"
+        ],
+        "default": false,
+        "icon": "https://downloads.raspberrypi.com/imager/icons/RPi_2.png",
+        "description": "Model B",
+        "matching_type": "inclusive"
+      },
+      {
+        "name": "Odroid",
+        "tags": [
+          "odroid-32bit"
+        ],
+        "default": false,
+        "icon": "https://downloads.raspberrypi.com/imager/icons/RPi_3.png",
+        "description": "Odroid n2l, n2plus",
+        "matching_type": "inclusive"
+      },
+      {
+        "name": "Tinker Board",
+        "tags": [
+          "tinker-32bit"
+        ],
+        "default": false,
+        "icon": "https://downloads.raspberrypi.com/imager/icons/RPi_3.png",
+        "description": "Tinker Board (s)",
+        "matching_type": "inclusive"
+      },
+      {
+        "name": "x86",
+        "tags": [
+          "x86-32bit",
+          "x86-64bit"
+        ],
+        "default": false,
+        "icon": "https://downloads.raspberrypi.com/imager/icons/cat_digital_signage.png",
+        "description": "x86'er systems",
+        "matching_type": "inclusive"
+      }
+    ]
+  },
+  "os_list": [
+    {
+      "name": "MLD-6.5 Odroid-n2l (32-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-odroid-n2l.wic",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "init_format": "systemd",
+      "devices": [
+        "odroid-32bit"
+      ]
+    },
+    {
+      "name": "MLD-6.5 Odroid-n2plus (32-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-odroid-n2plus.wic",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "devices": [
+        "odroid-32bit"
+      ]
+    },
+    {
+      "name": "MLD-6.5 RPI-2 (32-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-raspberrypi2.img",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "init_format": "systemd",
+      "devices": [
+        "pi3-32bit"
+      ]
+    },
+    {
+      "name": "MLD-6.5 RPI-3 (32-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-raspberrypi3.img",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "init_format": "systemd",
+      "devices": [
+        "pi3-32bit"
+      ]
+    },
+    {
+      "name": "MLD-6.5 RPI-4 (32-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-raspberrypi4.img",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "init_format": "systemd",
+      "devices": [
+        "pi4-32bit"
+      ]
+    },
+    {
+      "name": "MLD-6.5 Rock-Pi-4b (32-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-rock-pi-4b.wic",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "init_format": "systemd",
+      "devices": [
+        "rockpi4-32bit"
+      ]
+    },
+    {
+      "name": "MLD-6.5 Tinker-Bord (32-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-tinker-board.wic",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "init_format": "systemd",
+      "devices": [
+        "tinker-32bit"
+      ]
+    },
+    {
+      "name": "MLD-6.5 Tinker-Bord-S (32-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-tinker-board-s.wic",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "init_format": "systemd",
+      "devices": [
+        "tinker-32bit"
+      ]
+    },
+    {
+      "name": "MLD-6.5 x86 (64-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-x86-64.iso",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "init_format": "systemd",
+      "devices": [
+        "x86-64bit"
+      ]
+    },
+    {
+      "name": "MLD-6.5 x86-QEMU (64-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-x86-64-qemu.iso",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "devices": [
+        "x86-64bit"
+      ]
+    }
+  ]
+}

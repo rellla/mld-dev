@@ -34,10 +34,15 @@ repos:
       meta-initramfs:
       meta-multimedia:
 
-  meta-qt5:
-    url: https://github.com/meta-qt5/meta-qt5.git
-    branch: scarthgap
+        #  meta-qt5:
+        #    url: https://github.com/meta-qt5/meta-qt5.git
+        #    branch: scarthgap
   
+  meta-qt6:
+      #    refspec: dev
+    url: https://code.qt.io/yocto/meta-qt6.git
+    commit: 01692b5a8a60419800fd2e83ef886fd1f6dca4eb
+
   meta-browser:
     url: https://github.com/OSSystems/meta-browser.git
     commit: 83cb90c618e24af9bc40fb25baab2a0acd47a560 

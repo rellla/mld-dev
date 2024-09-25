@@ -11,8 +11,8 @@
       {
         "name": "Raspberry Pi 5",
         "tags": [
-          "pi5-64bit",
-          "pi5-32bit"
+          "rpi5-64bit",
+          "rpi5-32bit"
         ],
         "default": false,
         "icon": "https://downloads.raspberrypi.com/imager/icons/RPi_5.png",
@@ -22,8 +22,8 @@
       {
         "name": "Raspberry Pi 4",
         "tags": [
-          "pi4-64bit",
-          "pi4-32bit"
+          "rpi4-64bit",
+          "rpi4-32bit"
         ],
         "default": false,
         "icon": "https://downloads.raspberrypi.com/imager/icons/RPi_4.png",
@@ -33,8 +33,8 @@
       {
         "name": "Raspberry Pi 3",
         "tags": [
-          "pi3-64bit",
-          "pi3-32bit"
+          "rpi3-64bit",
+          "rpi3-32bit"
         ],
         "default": false,
         "icon": "https://downloads.raspberrypi.com/imager/icons/RPi_3.png",
@@ -44,7 +44,7 @@
       {
         "name": "Raspberry Pi 2",
         "tags": [
-          "pi2-32bit"
+          "rpi2-32bit"
         ],
         "default": false,
         "icon": "https://downloads.raspberrypi.com/imager/icons/RPi_2.png",
@@ -114,7 +114,7 @@
       "website": "https://www.minidvblinux.de",
       "init_format": "systemd",
       "devices": [
-        "pi3-32bit"
+        "rpi3-32bit"
       ]
     },
     {
@@ -125,7 +125,7 @@
       "website": "https://www.minidvblinux.de",
       "init_format": "systemd",
       "devices": [
-        "pi3-32bit"
+        "rpi3-32bit"
       ]
     },
     {
@@ -136,7 +136,7 @@
       "website": "https://www.minidvblinux.de",
       "init_format": "systemd",
       "devices": [
-        "pi4-32bit"
+        "rpi4-32bit"
       ]
     },
     {

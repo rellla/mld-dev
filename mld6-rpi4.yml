@@ -4,7 +4,7 @@ header:
     - install.yml
     - docker.yml
     
-machine: raspberrypi4
+machine: raspberrypi4-64
 
 repos:
   meta-mld:
@@ -21,7 +21,8 @@ local_conf_header:
   plattform: |
     #PREFERRED_VERSION_linux-raspberrypi ?= "5.10.%"
     #PREFERRED_PROVIDER_virtual/kernel ?= "linux-raspberrypi-dev"
-
+    PREFERRED_PROVIDER_vlc = "vlc"
+    
     IMAGE_FSTYPES = "rpi-sdimg"
     SDIMG_ROOTFS_TYPE = "squashfs"
     INITRAMFS_IMAGE = "core-image-minimal-initramfs"
@@ -29,6 +30,7 @@ local_conf_header:
     #VC4DTBO ?= "vc4-kms-v3d-pi4"
     VC4DTBO ?= "vc4-fkms-v3d"
     GPU_MEM ?= "320"
+    UBOOT_MACHINE = "rpi_arm64_config"
     MACHINE_FEATURES += "vc4graphics"
     #ENABLE_I2C = "1"
     DISABLE_OVERSCAN = "1"
@@ -45,6 +47,7 @@ local_conf_header:
     # DEPLOYPAYLOAD += "splash.bmp"
 
   extra: |
+    PACKAGECONFIG_pn-gstreamer1.0-plugins-ugly += "x264"
     #CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"
     #PREFERRED_VERSION_imagemagick = "6.%"
     #USER_CLASSES = "buildstats image-mklibs image-prelink"

@@ -129,20 +129,9 @@
       ]
     },
     {
-      "name": "MLD-6.5 RPI-4 (32-bit)",
-      "description": "MiniDVBLinux Installer",
-      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-raspberrypi4.img",
-      "icon": "https://www.minidvblinux.de/images/favicon.ico",
-      "website": "https://www.minidvblinux.de",
-      "init_format": "systemd",
-      "devices": [
-        "rpi4-32bit"
-      ]
-    },
-    {
       "name": "MLD-6.5 RPI-4 (64-bit)",
       "description": "MiniDVBLinux Installer",
-      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-raspberrypi4-64.img",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-raspberrypi4.img",
       "icon": "https://www.minidvblinux.de/images/favicon.ico",
       "website": "https://www.minidvblinux.de",
       "init_format": "systemd",

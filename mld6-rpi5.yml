@@ -4,7 +4,7 @@ header:
     - install.yml
     - docker.yml
     
-machine: raspberrypi4
+machine: raspberrypi5
 
 repos:
   meta-mld:

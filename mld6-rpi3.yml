@@ -45,3 +45,4 @@ local_conf_header:
     
   extra: |
     #CORE_IMAGE_EXTRA_INSTALL += "kernel-modules"
+    PREFERRED_PROVIDER_vlc = "vlc"

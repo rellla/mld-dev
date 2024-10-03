@@ -33,6 +33,7 @@ repos:
       meta-networking:
       meta-initramfs:
       meta-multimedia:
+      meta-gnome:
 
         #  meta-qt5:
         #    url: https://github.com/meta-qt5/meta-qt5.git
@@ -155,3 +156,4 @@ local_conf_header:
     DISTRO_FEATURES += "pam"
     DISTRO_FEATURES += "wifi"
     DISTRO_FEATURES += "usrmerge"
+    DISTRO_FEATURES += "polkit"

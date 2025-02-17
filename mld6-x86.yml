@@ -11,7 +11,8 @@ machine: genericx86-64
 repos:
   meta-intel:
     url: git://git.yoctoproject.org/meta-intel
-    branch: scarthgap 
+    branch: scarthgap
+    commit: cfb0e237cf3f25ffb128bd55e3e72eb0fb2ca096
 
 local_conf_header:
   plattform: |

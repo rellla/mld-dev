@@ -15,3 +15,6 @@ local_conf_header:
 
   vboxguestdrivers: |
     CORE_IMAGE_EXTRA_INSTALL += "vboxguestdrivers"
+
+  qemuguestagent: |
+    CORE_IMAGE_EXTRA_INSTALL += "qemu-guest-agent"

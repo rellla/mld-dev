@@ -29,7 +29,8 @@ local_conf_header:
     INITRAMFS_IMAGE = "core-image-minimal-initramfs"
 
     #VC4DTBO ?= "vc4-kms-v3d-pi4"
-    VC4DTBO ?= "vc4-fkms-v3d"
+    #VC4DTBO ?= "vc4-fkms-v3d"
+    VC4DTBO ?= "vc4-kms-v3d"
     GPU_MEM ?= "320"
     MACHINE_FEATURES += "vc4graphics"
     #ENABLE_I2C = "1"

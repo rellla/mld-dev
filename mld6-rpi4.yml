@@ -44,9 +44,9 @@ local_conf_header:
     "
     
   bootloader: |
-    # RPI_USE_U_BOOT = "1"
-    # INITRAMFS_FSTYPES:append = ".u-boot"
-    # DEPLOYPAYLOAD += "splash.bmp"
+    RPI_USE_U_BOOT = "1"
+    INITRAMFS_FSTYPES:append = ".u-boot"
+    DEPLOYPAYLOAD += "logo-1920x1080.bmp logo.bmp"
 
   extra: |
     PACKAGECONFIG_pn-gstreamer1.0-plugins-ugly += "x264"

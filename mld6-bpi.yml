@@ -10,6 +10,15 @@ repos:
     url: https://github.com/linux-sunxi/meta-sunxi.git
     branch: scarthgap
 
+  meta-arm:
+    url: https://git.yoctoproject.org/meta-arm
+    branch: scarthgap
+    layers:
+        meta-arm:
+        meta-arm-bsp:
+        meta-arm-systemready:
+        meta-arm-toolchain:
+
 local_conf_header:
   plattform: |
     #USER_CLASSES = " buildstats"

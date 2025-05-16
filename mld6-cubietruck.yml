@@ -14,6 +14,15 @@ repos:
     url: https://github.com/meta-qt5/meta-qt5/
     branch: scarthgap
 
+  meta-arm:
+    url: https://git.yoctoproject.org/meta-arm
+    branch: scarthgap
+    layers:
+        meta-arm:
+        meta-arm-bsp:
+        meta-arm-systemready:
+        meta-arm-toolchain:
+
 local_conf_header:
   machine: |
     DISTRO_FEATURES:append = " opengl"

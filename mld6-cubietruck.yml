@@ -30,3 +30,5 @@ local_conf_header:
     USER_CLASSES = " buildstats"
     #PREFERRED_VERSION_linux-mainline ?= "5.4%"
     #PREFERRED_VERSION_linux-sunxi ?= "3.4%"
+  extra: |
+    BB_DANGLINGAPPENDS_WARNONLY = "1"

@@ -27,3 +27,4 @@ local_conf_header:
   extra: |
     #Provide 1 Gb extra disk space for testing purposes
     IMAGE_ROOTFS_EXTRA_SPACE = "1048576"
+    BB_DANGLINGAPPENDS_WARNONLY = "1"

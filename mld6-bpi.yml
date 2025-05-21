@@ -5,6 +5,10 @@ header:
     
 machine: bananapi
 
+target:
+  - mld-image-boot
+  #- mld-image-base
+
 repos:
   meta-sunxi:
     url: https://github.com/linux-sunxi/meta-sunxi.git

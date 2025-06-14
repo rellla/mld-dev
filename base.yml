@@ -102,7 +102,7 @@ local_conf_header:
 
   bootoptions: |
     APPEND = "net.ifnames=0"
-    APPEND:append:normal = " vt.global_cursor_default=0 vga=current quiet splash"
+    APPEND:append:normal = " vt.global_cursor_default=0 console=tty1 vga=current quiet splash"
     APPEND:append:normal = " loglevel=3 systemd.show_status=auto udev.log_level=3"
     APPEND:append:verbose = " verbose=1 debug=1 init_fatal_sh=1"
 

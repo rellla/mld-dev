@@ -17,7 +17,7 @@ repos:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
     branch: scarthgap
     #commit: 3b27c95c163a042f8056066ec3d27edfcc42da7f
-    commit: 3afc9728b1f4ba0f5be1af34883d6582966133a1
+    commit: aaf976a665daa7e520545908adef8a0e9410b57f
 
 local_conf_header:
   plattform: |
@@ -34,7 +34,7 @@ local_conf_header:
     VC4DTBO ?= "vc4-kms-v3d"
     GPU_MEM ?= "320"
     UBOOT_MACHINE = "rpi_arm64_config"
-    MACHINE_FEATURES += "vc4graphics"
+    MACHINE_FEATURES += "vc4graphics pitft pitft35r"
     #ENABLE_I2C = "1"
     DISABLE_OVERSCAN = "1"
 

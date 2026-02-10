@@ -77,7 +77,7 @@ local_conf_header:
 
   shared_cache: |
     DL_DIR ?= "/home/share/downloads"
-    SSTATE_DIR ?= "/home/share/sstate-cache"
+    SSTATE_DIR ?= "/home/share-ssd/sstate-cache"
     #INHERIT += "ccache"
     BB_DEFAULT_UMASK = "002"
 

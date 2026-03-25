@@ -33,7 +33,7 @@ Installation of the packages you need for your build environment.
 ```
 sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
      build-essential chrpath socat libsdl1.2-dev xterm python3-pip locales locales-all \
-     cpio default-jre zstd liblz4-tool
+     file cpio default-jre zstd lz4
 ```
 
 Installation of the kas build tool

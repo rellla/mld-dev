@@ -23,6 +23,7 @@ RUN echo '/etc/init.d/ssh start\n/etc/init.d/nginx start\nsleep infinity' >> /in
 EXPOSE 22
 EXPOSE 80
 
+USER mld
 WORKDIR /home/mld
 
 CMD /init.sh

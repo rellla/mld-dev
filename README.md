@@ -22,9 +22,14 @@ Enter the docker container
 docker exec -it MLD-6 bash
 ```
 
-Or enter it by ssh
+Or set a password for user mld
 ```
-ssh localhost -p 2200
+docker exec -it MLD-6 passwd mld
+```
+
+and then you can enter it by ssh
+```
+ssh mld@localhost -p 2200
 ```
 
 ### b) On your system

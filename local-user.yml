@@ -1,5 +1,6 @@
+# Benutzerspezifische Einstellungen, die nicht eingecheckt werden sollen
+# Wenn Änderungen an dieser Datei vorgenommen werden sollte Git mitgeteilt werden, dass diese zu ignorieren sind:
+#   git update-index --assume-unchanged
+
 header:
-  version: 11
-
-
-
+  version: 10

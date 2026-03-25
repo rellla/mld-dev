@@ -1,5 +1,7 @@
 header:
   version: 10
+  includes: 
+    - local-user.yml
 
 distro: mld
 
@@ -75,11 +77,11 @@ local_conf_header:
     BUILDHISTORY_COMMIT = "1"
     PRSERV_HOST = "localhost:0"
 
-  shared_cache: |
-    DL_DIR ?= "/home/share/downloads"
-    SSTATE_DIR ?= "/home/share-ssd/sstate-cache"
-    #INHERIT += "ccache"
-    BB_DEFAULT_UMASK = "002"
+  # shared_cache: |
+  #   DL_DIR ?= "/home/share/downloads"
+  #   SSTATE_DIR ?= "/home/share-ssd/sstate-cache"
+  #   INHERIT += "ccache"
+  #   BB_DEFAULT_UMASK = "002"
 
   diskmon: |
     BB_DISKMON_DIRS = "\

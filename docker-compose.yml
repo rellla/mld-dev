@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+  mld6:
+    container_name: MLD-6
+    hostname: MLD-6
+    image: mld/dev:6
+    build: .
+    restart: always
+    ports:
+      - "2200:22"
+      - "8000:80"
+    volumes:
+      - type: bind
+        source: .
+        target: /home/mld/mld-dev

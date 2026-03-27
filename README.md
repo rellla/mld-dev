@@ -7,7 +7,7 @@ git clone https://gitlab.com/MLD-6/mld-dev.git
 
 ## Setup build environment
 
-You can use docker or build direkt on your system.
+You can use docker or build direkt on your Linux system.
 
 ### a) Either with docker
 
@@ -32,7 +32,7 @@ and then you can enter it by ssh
 ssh mld@localhost -p 2200
 ```
 
-### b) Or direkt on your system
+### b) Or direkt on your Linux system
 
 Installation of the packages you need for your build environment.
 ```

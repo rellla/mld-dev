@@ -9,7 +9,7 @@ git clone https://gitlab.com/MLD-6/mld-dev.git
 
 You can use docker or build direkt on your system.
 
-### a) With docker
+### a) Either with docker
 
 For this you have to install docker. Then you can start the docker container.
 ```
@@ -32,7 +32,7 @@ and then you can enter it by ssh
 ssh mld@localhost -p 2200
 ```
 
-### b) On your system
+### b) Or direkt on your system
 
 Installation of the packages you need for your build environment.
 ```

@@ -11,7 +11,7 @@ You can use docker or build direkt on your Linux system.
 
 ### a) Either with docker
 
-For this you have to install docker. Then you can start the docker container.
+For this you have to install docker. Then you can start the docker container as the user, who owned the files.
 ```
 cd mld-dev
 USER_ID=$(id -u) GROUP_ID=$(id -g) docker compose up -d

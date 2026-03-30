@@ -7,9 +7,8 @@ services:
     build:
       context: .
       args:
-        USER_ID: ${UID:-1000}
-        GROUP_ID: ${GID:-1000}
-    restart: always
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
     ports:
       - "2200:22"
       - "8000:80"
@@ -17,3 +16,4 @@ services:
       - type: bind
         source: .
         target: /home/mld/mld-dev
+    restart: always

@@ -14,6 +14,7 @@ You can use docker or build direkt on your Linux system.
 For this you have to install docker. Then you can start the docker container.
 ```
 cd mld-dev
+echo -e "UID=$(id -u)\nGID=$(id -g)" > .env
 docker compose up -d
 ```
 

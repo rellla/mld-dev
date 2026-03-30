@@ -4,7 +4,11 @@ services:
     container_name: MLD-6
     hostname: MLD-6
     image: mld/dev:6
-    build: .
+    build:
+      context: .
+      args:
+        USER_ID: ${UID:-1000}
+        GROUP_ID: ${GID:-1000}
     restart: always
     ports:
       - "2200:22"

@@ -14,7 +14,7 @@ You can use docker or build direkt on your Linux system.
 For this you have to install docker. Then you can start the docker container as the user, who owned the files.
 ```
 cd mld-dev
-USER_ID=$(id -u) GROUP_ID=$(id -g) docker compose up -d
+./docker-start.sh
 ```
 
 Enter the docker container
@@ -76,3 +76,13 @@ Then you can do for exampe:
   ```
   kas shell mld6-x86.yml -c "bitbake package-index"
   ```
+
+## Package Server
+
+To use your own build server as package sours, you have two options:
+
+- use your build server as default for your own images
+  ...
+
+- add your server at runtime
+  setting set packages.sources http://IP_OR_NAME_OF_BUILD_SERVER:8000

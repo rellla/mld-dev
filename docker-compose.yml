@@ -9,6 +9,7 @@ services:
       args:
         USER_ID: ${USER_ID:-1000}
         GROUP_ID: ${GROUP_ID:-1000}
+    userns_mode: "keep-id"
     ports:
       - "2200:22"
       - "8000:80"

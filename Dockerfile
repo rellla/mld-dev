@@ -6,7 +6,7 @@ ARG GROUP_ID=1000
 RUN apt-get update \
  && apt-get upgrade -y \
  && apt-get install -y \
-    gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio python3 python3-pip python3-pexpect python3-venv xz-utils debianutils iputils-ping libsdl1.2-dev xterm locales locales-all default-jre acl file \
+    gawk wget git-core diffstat unzip texinfo gcc-aarch64-linux-gnu build-essential chrpath socat cpio python3 python3-pip python3-pexpect python3-venv xz-utils debianutils iputils-ping libsdl1.2-dev xterm locales locales-all default-jre acl file \
     openssh-server nginx sudo \
     vim htop zstd lz4 \
  && apt clean

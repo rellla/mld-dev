@@ -162,6 +162,17 @@
       ]
     },
     {
+      "name": "MLD-6.5 Rock-Pi-4b-plus (32-bit)",
+      "description": "MiniDVBLinux Installer",
+      "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-rock-pi-4b-plus.wic",
+      "icon": "https://www.minidvblinux.de/images/favicon.ico",
+      "website": "https://www.minidvblinux.de",
+      "init_format": "systemd",
+      "devices": [
+        "rockpi4plus-32bit"
+      ]
+    },
+    {
       "name": "MLD-6.5 Tinker-Bord (32-bit)",
       "description": "MiniDVBLinux Installer",
       "url": "https://mld6.minidvblinux.de/nightbuild/images/mld-image-netinstall-tinker-board.wic",
